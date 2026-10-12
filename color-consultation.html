@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+  <link rel="icon" href="assets/images/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+<title>Chromora - Premium Residential Painting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Page Scoped CSS for Home 01 Redesign -->
+  <link rel="stylesheet" href="assets/css/home-01-redesign.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('chromora-theme');
+      } catch (error) {}
+      
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : (systemDark ? 'dark' : 'light');
+      
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="redesign-header fixed-top bg-white">
+    <div class="container-fluid px-4 px-lg-5">
+      <nav class="navbar navbar-expand-xxl py-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-xxl-0 fw-semibold">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="dropdown-item" href="index.html">Home &ndash; Painting Experts</a></li>
+                <li><a class="dropdown-item" href="home-02.html">Home &ndash; Design Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="color-consultation.html">Colors</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-actions d-flex align-items-center">
+            <button id="theme-toggle-home" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-5" aria-label="Toggle Theme">
+              <i class="bi bi-moon"></i>
+            </button>
+            <button id="rtl-toggle" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-6 fw-semibold" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Switch to right-to-left layout">
+              RTL
+            </button>
+            <a href="estimate.html" class="btn btn-navy navbar-estimate rounded-pill px-4 py-2 d-flex align-items-center gap-2 fw-semibold">
+              Get Free Estimate <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+    <!-- 1. Premium Color Studio Hero -->
+    <section class="color-hero section-padding position-relative overflow-hidden" style="padding-top: 140px;">
+      <div class="container position-relative z-1">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 mb-3 d-block">Explore Your Perfect Palette</span>
+            <h1 class="display-4 fw-bold text-navy mb-4">Discover Colors That Feel Like Home.</h1>
+            <p class="lead text-slate mb-5">Explore thoughtfully curated paint colors, discover beautiful combinations, and preview how different shades can transform your living spaces.</p>
+            <div class="hero-actions">
+              <a href="#visualizer-section" class="btn hero-button-primary">Explore Colors <i class="bi bi-arrow-down"></i></a>
+              <a href="contact.html" class="btn hero-button-secondary">Book Color Consultation <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="position-relative p-4">
+              <!-- Decorative color strips -->
+              <div class="position-absolute top-0 end-0 bg-gold rounded-pill" style="width: 12px; height: 100px; transform: rotate(15deg); opacity: 0.5;"></div>
+              <div class="position-absolute bottom-0 start-0 bg-navy rounded-pill" style="width: 12px; height: 100px; transform: rotate(-15deg); opacity: 0.3;"></div>
+              
+              <!-- Main Hero Image -->
+              <div class="rounded-4 overflow-hidden shadow-lg border border-4 border-white position-relative">
+                <img src="assets/images/home/painting-after.webp" alt="Beautiful Painted Living Room" class="w-100" style="height: 400px; object-fit: cover;">
+                <!-- Floating Swatches -->
+                <div class="position-absolute bottom-0 end-0 m-4 d-flex bg-white p-2 rounded-pill shadow-lg border">
+                  <div class="rounded-circle ms-1" style="width: 30px; height: 30px; background-color: #243B55;"></div>
+                  <div class="rounded-circle ms-2" style="width: 30px; height: 30px; background-color: #A8B7A6;"></div>
+                  <div class="rounded-circle ms-2 me-1" style="width: 30px; height: 30px; background-color: #C97859;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Room Color Visualizer -->
+    <section id="visualizer-section" class="py-5 bg-white border-top">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold text-navy mb-3">See Your Favorite Colors in a Real Space.</h2>
+          <p class="text-slate max-w-600 mx-auto">Choose a room, select a color, and explore how different shades can change the atmosphere of your home.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Left: Controls & Info -->
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-4 bg-light p-4 h-100">
+              
+              <!-- Room Selection -->
+              <div class="mb-4">
+                <label for="roomSelect" class="form-label fw-bold text-navy small text-uppercase tracking-wide">1. Select Room to Preview</label>
+                <select class="form-select form-select-lg rounded-pill border-gray bg-white shadow-none focus-ring-gold" id="roomSelect">
+                  <option value="living">Living Room</option>
+                  <option value="bedroom">Bedroom</option>
+                  <option value="kitchen">Kitchen</option>
+                  <option value="dining">Dining Room</option>
+                  <option value="office">Home Office</option>
+                  <option value="exterior">Exterior House</option>
+                </select>
+              </div>
+
+              <hr class="border-soft my-4">
+
+              <!-- Selected Color Panel -->
+              <label class="form-label fw-bold text-navy small text-uppercase tracking-wide mb-3">2. Selected Color Details</label>
+              <div class="bg-white rounded-4 border p-4 shadow-sm text-center position-relative mb-4">
+                <div id="selSwatch" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-white" style="width: 80px; height: 80px; background-color: #F6F2E9; outline: 1px solid #E8E9EB;"></div>
+                <h4 id="selName" class="fw-bold text-navy mb-1">Warm Ivory</h4>
+                <div class="d-flex justify-content-center gap-2 mb-3">
+                  <span id="selHex" class="badge bg-light text-slate border">#F6F2E9</span>
+                  <span id="selTone" class="badge bg-light text-slate border">Warm Whites</span>
+                </div>
+                <p id="selRec" class="text-slate small mb-4"><i class="bi bi-house-door me-1"></i> Living Room, Bedroom</p>
+                
+                <div class="color-preview-actions d-grid gap-2">
+                  <button id="btnResetPreview" class="btn color-preview-button color-preview-reset rounded-pill fw-bold mb-2"><i class="bi bi-arrow-counterclockwise me-2"></i> Reset Preview</button>
+                  <button id="btnSaveColor" class="btn color-preview-button rounded-pill fw-bold"><i class="bi bi-heart me-2"></i> Save Color</button>
+                  <div class="d-flex flex-wrap gap-2">
+                    <button id="btnCopyHex" class="btn color-preview-button rounded-pill flex-fill"><i class="bi bi-copy"></i> Copy HEX</button>
+                    <button id="btnCompare" class="btn color-preview-button rounded-pill flex-fill"><i class="bi bi-symmetry-vertical"></i> Compare</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-auto">
+                <p class="small text-slate mb-0" style="font-size: 0.75rem;">Digital colors are illustrative. Actual paint appearance may vary with lighting, finish, and screen settings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visualizer & Compare -->
+          <div class="col-lg-8">
+            <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-4 border-white bg-light" style="aspect-ratio: 16/10;">
+              <!-- Visualizer SVG Injected Here -->
+              <div id="visualizerSvgContainer" class="w-100 h-100 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-gold" role="status"><span class="visually-hidden">Loading...</span></div>
+              </div>
+            </div>
+            
+            <!-- Compare Section (Hidden by default) -->
+            <div id="compareSection" class="card border rounded-4 shadow-sm mt-4 p-4 d-none">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold text-navy mb-0">Compare Colors</h5>
+                <button id="btnResetCompare" class="btn btn-sm btn-link text-danger p-0 text-decoration-none">Reset Compare</button>
+              </div>
+              <div class="row g-3 text-center">
+                <div class="col-6">
+                  <div class="p-3 border rounded-3 bg-light transition-fast hover-shadow" id="compASwatch" style="cursor:pointer; background-color:#eee;">
+                    <span class="badge bg-white text-navy shadow-sm mb-2">Color A</span>
+                    <h6 id="compAName" class="fw-bold text-navy mb-0 bg-white d-inline-block px-2 rounded bg-opacity-75">Select Color A</h6>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border rounded-3 bg-light transition-fast hover-shadow" id="compBSwatch" style="cursor:pointer; background-color:#eee;">
+                    <span class="badge bg-white text-navy shadow-sm mb-2">Color B</span>
+                    <h6 id="compBName" class="fw-bold text-navy mb-0 bg-white d-inline-block px-2 rounded bg-opacity-75">Select Color B</h6>
+                  </div>
+                </div>
+              </div>
+              <p class="text-slate small mt-3 mb-0 text-center">Click a color above to apply it to the room preview.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Explore Paint Colors -->
+    <section class="py-5 bg-white" id="library-section">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5">
+          <div>
+            <h2 class="display-6 fw-bold text-navy mb-2">Explore Paint Colors</h2>
+            <p class="text-slate mb-0" id="resultsCount">Loading library...</p>
+          </div>
+          <div class="mt-4 mt-md-0" style="max-width: 300px; width: 100%;">
+            <div class="input-group">
+              <span class="input-group-text bg-light border-end-0 text-slate rounded-start-pill ps-4"><i class="bi bi-search"></i></span>
+              <input type="text" id="colorSearch" class="form-control bg-light border-start-0 rounded-end-pill py-2 shadow-none focus-ring-gold" placeholder="Search color or HEX...">
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="d-flex overflow-auto pb-3 mb-4 no-scrollbar" id="colorFilters" style="white-space: nowrap;">
+          <!-- Generated via JS -->
+        </div>
+
+        <!-- Color Grid -->
+        <div class="row" id="colorGrid">
+          <!-- Generated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Curated Color Palettes -->
+    <section class="py-5" style="background-color: var(--c-bg-alt);">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 mb-2 d-block">EXPERT SELECTIONS</span>
+          <h2 class="display-6 fw-bold text-navy">Curated Color Palettes</h2>
+        </div>
+        <div class="row" id="palettesGrid">
+          <!-- Generated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Color Ideas by Room -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold text-navy">Color Ideas by Room</h2>
+          <p class="text-slate">Not sure where to start? Try these recommended shades designed specifically for these spaces.</p>
+        </div>
+        <div class="row" id="roomRecsGrid">
+          <!-- Generated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Color Choosing Guide -->
+    <section class="py-5" style="background-color: #142E4A;">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 text-white">
+            <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 mb-3 d-block">EXPERT ADVICE</span>
+            <h2 class="display-5 fw-bold mb-4">Choosing the Right Color, Made Easier.</h2>
+            <p class="text-white-50 lead mb-5">We help you navigate the nuances of light, architecture, and mood to create a palette you'll love.</p>
+            
+            <div class="d-flex mb-4">
+              <div class="me-3"><i class="bi bi-brightness-high fs-3 text-gold"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Natural Lighting</h5>
+                <p class="text-white-50 small">Colors appear cooler in north-facing rooms and warmer in south-facing rooms. Always test samples in your actual lighting.</p>
+              </div>
+            </div>
+            
+            <div class="d-flex mb-4">
+              <div class="me-3"><i class="bi bi-thermometer-half fs-3 text-gold"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Warm vs Cool Undertones</h5>
+                <p class="text-white-50 small">Warm tones (reds, yellows, warm greiges) create coziness. Cool tones (blues, greens, cool grays) create serene, expansive feelings.</p>
+              </div>
+            </div>
+            
+            <div class="d-flex">
+              <div class="me-3"><i class="bi bi-layers fs-3 text-gold"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Paint Finishes</h5>
+                <p class="text-white-50 small">Matte hides imperfections on ceilings. Eggshell is perfect for living rooms. Satin or Semi-gloss provides durability for kitchens, bathrooms, and trim.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-3">
+              <div class="col-6">
+                <img src="assets/images/services/interior-painting.webp" alt="Interior Details" class="w-100 rounded-4 shadow-lg mb-3" style="height: 250px; object-fit:cover;">
+                <img src="assets/images/services/cabinet-painting.webp" alt="Cabinet Details" class="w-100 rounded-4 shadow-lg" style="height: 350px; object-fit:cover;">
+              </div>
+              <div class="col-6 mt-4">
+                <img src="assets/images/services/bedroom-painting.webp" alt="Bedroom Details" class="w-100 rounded-4 shadow-lg mb-3" style="height: 350px; object-fit:cover;">
+                <img src="assets/images/services/living-room-painting.webp" alt="Living Room Details" class="w-100 rounded-4 shadow-lg" style="height: 250px; object-fit:cover;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Saved Colors Collection -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+              <div class="bg-light p-4 border-bottom">
+                <h4 class="fw-bold text-navy mb-0"><i class="bi bi-bookmark-heart text-gold me-2"></i> Your Saved Color Collection</h4>
+              </div>
+              <div class="p-4 bg-white">
+                <div class="row" id="favoritesGrid">
+                  <!-- Generated via JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Color Consultation Process -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="display-6 fw-bold text-navy mb-5">Our Consultation Process</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-md-2 position-relative">
+            <div class="rounded-circle bg-white border border-2 border-gold mx-auto mb-3 d-flex align-items-center justify-content-center text-navy fw-bold shadow-sm" style="width:60px; height:60px; font-size:1.5rem;">1</div>
+            <h6 class="fw-bold text-navy">Inspiration</h6>
+            <p class="small text-slate">Share your vision</p>
+          </div>
+          <div class="col-6 col-md-2 position-relative">
+            <div class="rounded-circle bg-white border border-2 border-gold mx-auto mb-3 d-flex align-items-center justify-content-center text-navy fw-bold shadow-sm" style="width:60px; height:60px; font-size:1.5rem;">2</div>
+            <h6 class="fw-bold text-navy">Evaluation</h6>
+            <p class="small text-slate">Understand space</p>
+          </div>
+          <div class="col-6 col-md-2 position-relative">
+            <div class="rounded-circle bg-white border border-2 border-gold mx-auto mb-3 d-flex align-items-center justify-content-center text-navy fw-bold shadow-sm" style="width:60px; height:60px; font-size:1.5rem;">3</div>
+            <h6 class="fw-bold text-navy">Exploration</h6>
+            <p class="small text-slate">Review options</p>
+          </div>
+          <div class="col-6 col-md-2 position-relative">
+            <div class="rounded-circle bg-white border border-2 border-gold mx-auto mb-3 d-flex align-items-center justify-content-center text-navy fw-bold shadow-sm" style="width:60px; height:60px; font-size:1.5rem;">4</div>
+            <h6 class="fw-bold text-navy">Testing</h6>
+            <p class="small text-slate">Sample physical colors</p>
+          </div>
+          <div class="col-6 col-md-2 position-relative">
+            <div class="rounded-circle bg-white border border-2 border-gold mx-auto mb-3 d-flex align-items-center justify-content-center text-navy fw-bold shadow-sm" style="width:60px; height:60px; font-size:1.5rem;">5</div>
+            <h6 class="fw-bold text-navy">Execution</h6>
+            <p class="small text-slate">Professional painting</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Color Consultation FAQ -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold text-navy">Frequently Asked Questions</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="colorFaq">
+              <div class="accordion-item border-soft mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header"><button class="accordion-button fw-bold text-navy shadow-none bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#q1">How do I choose a paint color for my living room?</button></h2>
+                <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#colorFaq"><div class="accordion-body text-slate">Consider the room's natural light, existing furniture, and intended mood. Warm neutrals and greiges are universally flattering, while deeper tones create intimacy.</div></div>
+              </div>
+              <div class="accordion-item border-soft mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold text-navy shadow-none bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Why do paint colors look different in natural light?</button></h2>
+                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#colorFaq"><div class="accordion-body text-slate">Light temperature changes throughout the day. Morning light is cool, while evening light is warm. A color will reflect these shifts, which is why testing samples is critical.</div></div>
+              </div>
+              <div class="accordion-item border-soft mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold text-navy shadow-none bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Are the digital colors exact matches to physical paint?</button></h2>
+                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#colorFaq"><div class="accordion-body text-slate">No. Digital screens emit light, while paint absorbs it. These swatches are highly accurate representations designed for planning, but you should always approve a physical sample.</div></div>
+              </div>
+              <div class="accordion-item border-soft mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold text-navy shadow-none bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#q4">How do I request a painting estimate with my selected colors?</button></h2>
+                <div id="q4" class="accordion-collapse collapse" data-bs-parent="#colorFaq"><div class="accordion-body text-slate">Save your favorite colors using the heart icon. When you click "Get Free Estimate" at the bottom of this page, your saved colors will be automatically securely attached to your request.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Consultation & Estimate CTA -->
+    <section class="py-5" style="background-color: var(--c-bg-alt);">
+      <div class="container">
+        <div class="color-consultation-cta bg-navy rounded-4 p-5 text-center shadow-lg position-relative overflow-hidden">
+          <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at center, #B89562 0%, transparent 60%);"></div>
+          <div class="position-relative z-1">
+            <h2 class="display-5 fw-bold text-white mb-3">Found Colors You Love? Let's Bring Them Home.</h2>
+            <p class="text-white-50 lead max-w-600 mx-auto mb-5">Explore professional color consultation and residential painting services to bring your preferred palette to life.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="estimate.html" id="btnEstimate" class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm" style="background-color: #B89562; color: #142E4A; border: none;">Get Free Estimate <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold">Contact Our Team</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-5">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 pe-lg-5">
+          <a class="navbar-brand d-flex align-items-center mb-4" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+          <p class="text-slate small mb-4">Premium residential painting services. Discover modern finishes, thoughtful color selection, and meticulous craftsmanship for your home.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><a href="index.html" class="text-slate text-decoration-none small hover-gold transition-fast">Home</a></li>
+            <li><a href="projects.html" class="text-slate text-decoration-none small hover-gold transition-fast">Projects</a></li>
+            <li><a href="about.html" class="text-slate text-decoration-none small hover-gold transition-fast">About Us</a></li>
+            <li><a href="services.html" class="text-slate text-decoration-none small hover-gold transition-fast">Services</a></li>
+            <li><a href="contact.html" class="text-slate text-decoration-none small hover-gold transition-fast">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Get in Touch</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-telephone text-gold mt-1"></i>
+              <a href="tel:5551234567" class="text-slate text-decoration-none small hover-gold transition-fast">(555) 123-4567</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-envelope text-gold mt-1"></i>
+              <a href="mailto:hello@chromora.demo" class="text-slate text-decoration-none small hover-gold transition-fast">hello@chromora.demo</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span class="text-slate small">123 Design Avenue,<br>Creative City, ST 12345</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 no-stack footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Facebook (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-facebook fs-6"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Instagram (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-instagram fs-6"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="Log in to LinkedIn (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-linkedin fs-6"></i></a>
+            <a href="https://www.youtube.com/signin" target="_blank" rel="noopener noreferrer" aria-label="Log in to YouTube (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-youtube fs-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top pt-4 mt-4 align-items-center">
+        <div class="col-12 text-center text-md-start">
+          <p class="text-slate small mb-0">&copy; 2026 Chromora Painting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/color-data.js"></script>
+  <script src="assets/js/color-rooms.js"></script>
+  <script src="assets/js/color-studio.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

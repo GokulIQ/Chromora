@@ -1,0 +1,614 @@
+/* ==========================================================================
+   Chromora - Complete Responsive Design System & Global Layout Optimizations
+   Mobile-First, Fluid Scaling, Grid Normalization & Cross-Device UI/UX
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS VARIABLES & SYSTEM SCALING
+   -------------------------------------------------------------------------- */
+:root {
+  --site-max-width: 1320px;
+  --site-gutter: clamp(16px, 4vw, 36px);
+  --header-height: 85px;
+  --header-height-mobile: 72px;
+
+  /* Section Spacing Scales */
+  --spacing-section-desktop: clamp(80px, 8vw, 100px);
+  --spacing-section-tablet: clamp(56px, 6vw, 72px);
+  --spacing-section-mobile: clamp(40px, 5vw, 56px);
+
+  /* Touch Target Minimum */
+  --min-tap-target: 44px;
+
+  /* Fluid typography */
+  --fluid-h1: clamp(2.15rem, 4.5vw, 4.25rem);
+  --fluid-h2: clamp(1.8rem, 3.2vw, 3rem);
+  --fluid-h3: clamp(1.35rem, 2.2vw, 2rem);
+  --fluid-h4: clamp(1.15rem, 1.8vw, 1.5rem);
+  --fluid-body: clamp(0.95rem, 1vw, 1.05rem);
+}
+
+/* --------------------------------------------------------------------------
+   1.5. GLOBAL HORIZONTAL OVERFLOW PREVENTION & VIEWPORT LOCK
+   Eliminates all horizontal panning, accidental viewport stretch, and
+   transforms extending past the viewport edge.
+   -------------------------------------------------------------------------- */
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: clip !important;
+  position: relative;
+}
+
+@supports not (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+/* Safety override: neutralize any horizontal off-canvas translation from AOS */
+[data-aos="fade-left"],
+[data-aos="fade-right"] {
+  transform: translate3d(0, 30px, 0) !important;
+}
+
+[data-aos="fade-left"].aos-animate,
+[data-aos="fade-right"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL CONTAINER & ROW GUTTER NORMALIZATION
+   Fixes negative margin overflow across all screen sizes
+   -------------------------------------------------------------------------- */
+.container,
+.container-fluid,
+.site-container {
+  padding-right: var(--site-gutter) !important;
+  padding-left: var(--site-gutter) !important;
+}
+
+.container {
+  max-width: var(--site-max-width);
+  margin-inline: auto;
+}
+
+/* Ensure row gutters never exceed container padding */
+.row {
+  --bs-gutter-x: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.row.g-5,
+.row.gx-5 {
+  --bs-gutter-x: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 1199.98px) {
+  .row.g-5,
+  .row.gx-5 {
+    --bs-gutter-x: 1.5rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .row.g-5,
+  .row.gx-5,
+  .row.g-4,
+  .row.gx-4 {
+    --bs-gutter-x: 1rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. GLOBAL TYPOGRAPHY & WORD WRAPPING
+   Prevents text clipping, overflows, and oversized headings
+   -------------------------------------------------------------------------- */
+h1, .display-4, .display-5 {
+  font-size: var(--fluid-h1);
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+h2, .display-6 {
+  font-size: var(--fluid-h2);
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+h3, .h3 {
+  font-size: var(--fluid-h3);
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+h4, .h4 {
+  font-size: var(--fluid-h4);
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+p, .lead, span, a, li {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.lead {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   4. GLOBAL SECTION SPACING
+   -------------------------------------------------------------------------- */
+.section-padding,
+.section-padding-premium {
+  padding-top: var(--spacing-section-desktop);
+  padding-bottom: var(--spacing-section-desktop);
+}
+
+@media (max-width: 991.98px) {
+  .section-padding,
+  .section-padding-premium {
+    padding-top: var(--spacing-section-tablet);
+    padding-bottom: var(--spacing-section-tablet);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-padding,
+  .section-padding-premium {
+    padding-top: var(--spacing-section-mobile);
+    padding-bottom: var(--spacing-section-mobile);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. MEDIA & IMAGES RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.responsive-media img,
+.responsive-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Prevent decorative elements from causing horizontal overflow */
+.position-relative {
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. STICKY HEADER & ANCHOR NAVIGATION
+   -------------------------------------------------------------------------- */
+.redesign-header,
+.site-header {
+  min-height: var(--header-height);
+}
+
+@media (max-width: 991.98px) {
+  .redesign-header,
+  .site-header {
+    min-height: var(--header-height-mobile);
+  }
+}
+
+/* Offset for all internal hash anchor jumps */
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+@media (max-width: 991.98px) {
+  [id] {
+    scroll-margin-top: calc(var(--header-height-mobile) + 12px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. MOBILE NAVIGATION DRAWER & TABLET ADAPTATION
+   -------------------------------------------------------------------------- */
+@media (max-width: 1399.98px) {
+  .navbar-toggler {
+    min-width: var(--min-tap-target);
+    min-height: var(--min-tap-target);
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .redesign-header .navbar-collapse {
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--color-surface, #fff);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    padding: 16px 20px;
+    margin-top: 12px;
+    border: 1px solid var(--color-border, #E8E9EB);
+  }
+
+  .redesign-header .navbar-nav {
+    gap: 4px;
+    padding-bottom: 12px;
+  }
+
+  .redesign-header .nav-link {
+    padding: 10px 14px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+  }
+
+  .redesign-header .dropdown-menu {
+    border: 1px solid var(--color-border, #E8E9EB);
+    box-shadow: none;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    background-color: var(--color-section-alt, #FAF8F5);
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  .redesign-header .navbar-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border, #E8E9EB);
+  }
+
+  .redesign-header .navbar-icon-button {
+    min-width: var(--min-tap-target);
+    min-height: var(--min-tap-target);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--color-section-alt, #FAF8F5);
+    padding: 8px 14px;
+  }
+
+  .redesign-header .navbar-estimate {
+    width: 100%;
+    justify-content: center;
+    padding-block: 12px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. CARD EQUALIZATION & FLEXBOX IMPROVEMENTS
+   -------------------------------------------------------------------------- */
+.service-card,
+.project-card,
+.blog-card,
+.testimonial-card,
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card .mt-auto,
+.project-card .mt-auto,
+.blog-card .mt-auto {
+  margin-top: auto !important;
+}
+
+/* Card Grids */
+@media (max-width: 991.98px) {
+  .service-card,
+  .project-card,
+  .blog-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .service-card,
+  .project-card,
+  .blog-card {
+    padding: 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. FILTER BARS (SERVICES, PROJECTS, BLOG, COLORS)
+   -------------------------------------------------------------------------- */
+.filter-pills,
+#categoryFilters,
+#projectFilterBtns,
+#blogFilterBtns,
+#colorFilters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+  max-width: 100%;
+}
+
+.filter-pills::-webkit-scrollbar,
+#categoryFilters::-webkit-scrollbar,
+#projectFilterBtns::-webkit-scrollbar,
+#blogFilterBtns::-webkit-scrollbar,
+#colorFilters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-pill,
+.project-filter-btn,
+.blog-filter-btn {
+  flex-shrink: 0;
+  min-height: 38px;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   10. BUTTONS & TOUCH TARGETS
+   -------------------------------------------------------------------------- */
+button,
+.btn,
+.nav-link,
+.dropdown-item {
+  touch-action: manipulation;
+}
+
+@media (max-width: 575.98px) {
+  .hero-actions,
+  .cta-actions,
+  .d-flex.gap-3:not(.no-stack) {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .hero-actions .btn,
+  .cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. ANIMATIONS & TRANSFORM SAFEGUARDS
+   Prevents AOS horizontal translation from causing overflow on mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translate3d(0, 24px, 0) !important;
+  }
+  [data-aos="fade-left"].aos-animate,
+  [data-aos="fade-right"].aos-animate {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  /* Index About floating badge */
+  .chromora-floating-badge,
+  [style*="transform: translate(20px, 20px)"] {
+    position: static !important;
+    transform: none !important;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. PAGE SPECIFIC ADAPTATIONS
+   -------------------------------------------------------------------------- */
+
+/* Home 01 Floating Estimate Bar */
+@media (max-width: 1199.98px) {
+  .floating-estimate-bar {
+    position: static !important;
+    transform: none !important;
+    margin-top: 0;
+    border-radius: 16px !important;
+    padding: 1.5rem !important;
+  }
+  .floating-estimate-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .floating-estimate-bar > .w-100 {
+    padding-inline: 0 !important;
+    margin-top: 0 !important;
+    min-width: 0;
+  }
+  .floating-estimate-bar label {
+    display: block;
+    padding-inline: 0 !important;
+    margin-bottom: 6px;
+    text-align: start;
+  }
+  .floating-estimate-bar > .d-flex > i {
+    display: none !important;
+  }
+  .floating-estimate-bar > .d-flex > .flex-grow-1 {
+    min-width: 0;
+  }
+  .floating-estimate-bar .estimate-select {
+    padding-inline-end: 2.5rem;
+    font-size: 1rem;
+  }
+  .floating-estimate-bar .form-control,
+  .floating-estimate-bar .form-select,
+  .floating-estimate-bar .btn {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .floating-estimate-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end !important;
+    gap: 20px 24px;
+  }
+  .floating-estimate-bar .form-select,
+  .floating-estimate-bar .btn {
+    min-height: 54px;
+  }
+}
+
+/* Home 02 Masonry & Editorial */
+@media (max-width: 991.98px) {
+  .masonry-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .masonry-grid .col-md-6,
+  .masonry-grid .col-md-4 {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Color Consultation Visualizer */
+#visualizerSvgContainer svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991.98px) {
+  #visualizerSvgContainer {
+    min-height: 260px;
+  }
+}
+
+/* Pricing Comparison Table & Process Steps */
+.table-responsive {
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .process-step {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 1.25rem;
+    row-gap: 0.25rem;
+    text-align: left !important;
+    margin-bottom: 2rem;
+    align-items: start;
+  }
+  .process-step .process-number {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    margin: 0 !important;
+  }
+  .process-step h5 {
+    grid-row: 1;
+    grid-column: 2;
+    margin-bottom: 0.25rem !important;
+  }
+  .process-step p {
+    grid-row: 2;
+    grid-column: 2;
+    margin-bottom: 0 !important;
+    padding-inline: 0 !important;
+  }
+  .process-step::after {
+    display: none !important;
+  }
+}
+
+/* Contact Page Map */
+.contact-map-container,
+.map-responsive {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.contact-map-container iframe,
+.map-responsive iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* Estimate Calculator Step Responsiveness */
+@media (max-width: 767.98px) {
+  .estimate-steps-header {
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+  .estimate-steps-nav {
+    min-width: 500px;
+  }
+  .estimate-summary-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .estimate-summary-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Services Details Modal Mobile Viewport */
+@media (max-width: 767.98px) {
+  #serviceDetailsModal {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    max-height: 94dvh !important;
+    margin: auto !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+  .service-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .service-details-sections {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. FOOTER RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+.site-footer,
+footer.bg-white {
+  padding-top: var(--spacing-section-mobile);
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .site-footer,
+  footer.bg-white {
+    text-align: left;
+  }
+  .footer-col,
+  footer .col-lg-3,
+  footer .col-lg-4,
+  footer .col-lg-2 {
+    margin-bottom: 2rem;
+  }
+  .footer-bottom,
+  footer .border-top {
+    text-align: center;
+  }
+}

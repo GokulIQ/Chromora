@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+  <link rel="icon" href="assets/images/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+<title>Chromora - Premium Residential Painting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Page Scoped CSS for Home 01 Redesign -->
+  <link rel="stylesheet" href="assets/css/home-01-redesign.css">
+  <link rel="stylesheet" href="assets/css/home-02-gallery.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('chromora-theme');
+      } catch (error) {}
+      
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : (systemDark ? 'dark' : 'light');
+      
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="redesign-header fixed-top bg-white">
+    <div class="container-fluid px-4 px-lg-5">
+      <nav class="navbar navbar-expand-xxl py-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-xxl-0 fw-semibold">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="dropdown-item" href="index.html">Home &ndash; Painting Experts</a></li>
+                <li><a class="dropdown-item" href="home-02.html">Home &ndash; Design Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="color-consultation.html">Colors</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-actions d-flex align-items-center">
+            <button id="theme-toggle-home" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-5" aria-label="Toggle Theme">
+              <i class="bi bi-moon"></i>
+            </button>
+            <button id="rtl-toggle" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-6 fw-semibold" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Switch to right-to-left layout">
+              RTL
+            </button>
+            <a href="estimate.html" class="btn btn-navy navbar-estimate rounded-pill px-4 py-2 d-flex align-items-center gap-2 fw-semibold">
+              Get Free Estimate <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<!-- Home 02 Hero -->
+<section class="position-relative overflow-hidden" style="height: 90vh; min-height: 700px;">
+  <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Exterior Paint" class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; z-index: -1;">
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50" style="z-index: 0;"></div>
+  
+  <div class="container h-100 position-relative z-1 d-flex align-items-center">
+    <div class="row w-100">
+      <div class="col-lg-8 text-white" data-aos="fade-up">
+        <h1 class="display-2 mb-4 text-white fw-bold">Modern Home Transformation</h1>
+        <p class="lead mb-5 fs-4 text-white-50">Expert interior and exterior painting services that elevate your home's aesthetic and value.</p>
+        <div class="hero-actions hero-actions-on-image">
+          <a href="estimate.html" class="btn hero-button-primary">Request a Quote</a>
+          <a href="services.html" class="btn hero-button-secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Trust Strip -->
+<section class="py-4 bg-primary text-white position-relative shadow" style="z-index: 10; margin-top: -30px;">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center text-md-start g-4">
+      <div class="col-md-auto d-flex align-items-center gap-2">
+        <i class="bi bi-star-fill text-warning"></i>
+        <span class="fw-bold">Top Rated Painters</span>
+      </div>
+      <div class="col-md-auto d-flex align-items-center gap-2">
+        <i class="bi bi-shield-check text-accent"></i>
+        <span class="fw-bold">Licensed & Insured</span>
+      </div>
+      <div class="col-md-auto d-flex align-items-center gap-2">
+        <i class="bi bi-check-circle text-success"></i>
+        <span class="fw-bold">Satisfaction Guarantee</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SECTION 01 — EDITORIAL INTRODUCTION -->
+  <section class="py-5 my-md-5" id="editorial-intro">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-4">The Chromora Studio</span>
+          <h2 class="display-4 fw-bold text-navy lh-sm mb-0">Every Beautiful Home Begins With a Thoughtful Detail.</h2>
+        </div>
+        <div class="col-lg-7">
+          <div class="border-top border-gold pt-4 mt-2" style="border-width: 2px !important; border-color: #B89562 !important;">
+            <p class="lead text-slate fs-4 mb-4">We believe that painting is more than just applying color to a wall—it is the foundation of interior design. It influences the atmosphere of a room, enhances natural lighting, highlights architectural details, and reflects your personal style.</p>
+            <p class="text-slate mb-4">Through a thoughtful approach to color curation and meticulous craftsmanship, Chromora helps homeowners transform their spaces into tailored environments that feel perfectly harmonized.</p>
+            <a href="about.html" class="btn home-action">Read Our Story <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02 — COLOR STORIES COLLECTION -->
+  <section class="py-5 bg-light border-top border-soft" id="color-stories">
+    <div class="container py-4">
+      <div class="text-center mb-5 pb-3">
+        <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-2">Curated Palettes</span>
+        <h2 class="display-6 fw-bold text-navy mb-0">Stories Told Through Color.</h2>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Story 01 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group">
+            <img src="assets/images/home-02/color-story-calm.webp" class="w-100" style="height: 300px; object-fit: cover;" alt="Calm Neutrals">
+            <div class="card-body p-4 bg-white d-flex flex-column">
+              <h5 class="fw-bold text-navy mb-3">Calm Neutrals</h5>
+              <div class="d-flex mb-3">
+                <div class="flex-fill" style="height:20px; background:#FAF8F5;" title="Warm Ivory"></div>
+                <div class="flex-fill" style="height:20px; background:#EDE2D3;" title="Soft Beige"></div>
+                <div class="flex-fill" style="height:20px; background:#D8D0C5;" title="Greige"></div>
+                <div class="flex-fill" style="height:20px; background:#C1B8AD;" title="Muted Taupe"></div>
+              </div>
+              <p class="text-slate small flex-grow-1">Explore warm whites, soft greiges, and natural beige tones for relaxing, airy interiors.</p>
+              <a href="color-consultation.html" class="btn home-action">Explore Palette <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Story 02 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group">
+            <img src="assets/images/home-02/color-story-green.webp" class="w-100" style="height: 300px; object-fit: cover;" alt="Botanical Greens">
+            <div class="card-body p-4 bg-white d-flex flex-column">
+              <h5 class="fw-bold text-navy mb-3">Botanical Greens</h5>
+              <div class="d-flex mb-3">
+                <div class="flex-fill" style="height:20px; background:#E5E9E1;" title="Mint Hint"></div>
+                <div class="flex-fill" style="height:20px; background:#B8C4B1;" title="Eucalyptus"></div>
+                <div class="flex-fill" style="height:20px; background:#7B8B6F;" title="Sage Green"></div>
+                <div class="flex-fill" style="height:20px; background:#4A5D43;" title="Deep Forest"></div>
+              </div>
+              <p class="text-slate small flex-grow-1">Explore sage, eucalyptus, and deeper green shades inspired by natural botanicals.</p>
+              <a href="color-consultation.html" class="btn home-action">Explore Palette <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 03 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group">
+            <img src="assets/images/home-02/color-story-blue.webp" class="w-100" style="height: 300px; object-fit: cover;" alt="Coastal Blues">
+            <div class="card-body p-4 bg-white d-flex flex-column">
+              <h5 class="fw-bold text-navy mb-3">Coastal Blues</h5>
+              <div class="d-flex mb-3">
+                <div class="flex-fill" style="height:20px; background:#E8EDF2;" title="Ice Blue"></div>
+                <div class="flex-fill" style="height:20px; background:#B2C2CF;" title="Dusty Blue"></div>
+                <div class="flex-fill" style="height:20px; background:#637E94;" title="Slate Blue"></div>
+                <div class="flex-fill" style="height:20px; background:#19324D;" title="Deep Navy"></div>
+              </div>
+              <p class="text-slate small flex-grow-1">Explore airy blue-gray shades and sophisticated navy accents for a classic coastal feel.</p>
+              <a href="color-consultation.html" class="btn home-action">Explore Palette <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 04 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 group">
+            <img src="assets/images/home-02/color-story-earthy.webp" class="w-100" style="height: 300px; object-fit: cover;" alt="Earthy Warmth">
+            <div class="card-body p-4 bg-white d-flex flex-column">
+              <h5 class="fw-bold text-navy mb-3">Earthy Warmth</h5>
+              <div class="d-flex mb-3">
+                <div class="flex-fill" style="height:20px; background:#F5EBE6;" title="Warm Blush"></div>
+                <div class="flex-fill" style="height:20px; background:#E2C7B8;" title="Clay"></div>
+                <div class="flex-fill" style="height:20px; background:#C78B6D;" title="Terracotta"></div>
+                <div class="flex-fill" style="height:20px; background:#8A5A44;" title="Deep Earth"></div>
+              </div>
+              <p class="text-slate small flex-grow-1">Explore terracotta, muted ochre, clay, and warm natural finishes that ground a room.</p>
+              <a href="color-consultation.html" class="btn home-action">Explore Palette <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03 — ROOM-BY-ROOM INSPIRATION -->
+  <section class="py-5 my-5" id="room-inspiration">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="display-6 fw-bold text-navy mb-0">Find a Look for Every Room.</h2>
+        </div>
+        <div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
+          <p class="text-slate mb-0 max-w-500 ms-lg-auto">Different spaces serve different purposes. Discover how targeted color choices can enhance the specific mood and function of your rooms.</p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="room-inspiration-card position-relative rounded-4 overflow-hidden shadow-lg h-100" style="min-height: 500px;">
+            <img id="roomGalleryMainImg" src="assets/images/services/interior-painting.webp" class="w-100 h-100 position-absolute top-0 start-0 transition-fast" style="object-fit: cover;" alt="Room Inspiration">
+            <div class="room-inspiration-caption position-absolute bottom-0 start-0 w-100 p-5 bg-gradient-dark-up text-white z-1">
+              <span class="badge bg-gold text-navy fw-bold mb-2">Inspiration</span>
+              <h3 id="roomGalleryTitle" class="display-6 fw-bold mb-3 text-white">The Living Room</h3>
+              <p id="roomGalleryDesc" class="lead text-white-50 mb-4 max-w-600">Neutral tones paired with deep architectural accents create a grounded, welcoming gathering space.</p>
+              <div class="room-inspiration-actions d-flex align-items-center gap-4">
+                <div>
+                  <span class="fs-8 text-uppercase tracking-wide d-block mb-2 text-white-50">Suggested Palette</span>
+                  <div id="roomGalleryColors" class="d-flex gap-2">
+                    <div class="rounded-circle" style="width:24px; height:24px; background:#FAF8F5;"></div>
+                    <div class="rounded-circle" style="width:24px; height:24px; background:#142E4A;"></div>
+                    <div class="rounded-circle" style="width:24px; height:24px; background:#B89562;"></div>
+                  </div>
+                </div>
+                <a id="roomGalleryLink" href="services.html#interior-painting" class="btn btn-outline-light rounded-pill px-4 fw-bold">Explore Interior Painting</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex flex-column gap-3 h-100">
+            <button class="room-selector-btn active w-100 border-0 bg-transparent p-0 text-start group" data-room="living">
+              <div class="d-flex align-items-center p-3 rounded-4 transition-fast bg-light group-hover:bg-soft">
+                <img src="assets/images/services/interior-painting.webp" class="rounded-3 me-3" style="width: 80px; height: 60px; object-fit: cover;" alt="Living Room">
+                <div>
+                  <h6 class="fw-bold text-navy mb-1">Living Room</h6>
+                  <span class="text-slate small">Gathering & Relaxation</span>
+                </div>
+              </div>
+            </button>
+            <button class="room-selector-btn w-100 border-0 bg-transparent p-0 text-start group" data-room="bedroom">
+              <div class="d-flex align-items-center p-3 rounded-4 transition-fast group-hover:bg-soft">
+                <img src="assets/images/home-02/room-bedroom.webp" class="rounded-3 me-3" style="width: 80px; height: 60px; object-fit: cover;" alt="Bedroom">
+                <div>
+                  <h6 class="fw-bold text-navy mb-1">Bedroom</h6>
+                  <span class="text-slate small">Restful Sanctuary</span>
+                </div>
+              </div>
+            </button>
+            <button class="room-selector-btn w-100 border-0 bg-transparent p-0 text-start group" data-room="kitchen">
+              <div class="d-flex align-items-center p-3 rounded-4 transition-fast group-hover:bg-soft">
+                <img src="assets/images/home-02/room-kitchen.webp" class="rounded-3 me-3" style="width: 80px; height: 60px; object-fit: cover;" alt="Kitchen">
+                <div>
+                  <h6 class="fw-bold text-navy mb-1">Kitchen</h6>
+                  <span class="text-slate small">Culinary Energy</span>
+                </div>
+              </div>
+            </button>
+            <button class="room-selector-btn w-100 border-0 bg-transparent p-0 text-start group" data-room="dining">
+              <div class="d-flex align-items-center p-3 rounded-4 transition-fast group-hover:bg-soft">
+                <img src="assets/images/home-02/room-dining.webp" class="rounded-3 me-3" style="width: 80px; height: 60px; object-fit: cover;" alt="Dining Room">
+                <div>
+                  <h6 class="fw-bold text-navy mb-1">Dining Room</h6>
+                  <span class="text-slate small">Elegant Entertaining</span>
+                </div>
+              </div>
+            </button>
+            <button class="room-selector-btn w-100 border-0 bg-transparent p-0 text-start group" data-room="office">
+              <div class="d-flex align-items-center p-3 rounded-4 transition-fast group-hover:bg-soft">
+                <img src="assets/images/home-02/room-office.webp" class="rounded-3 me-3" style="width: 80px; height: 60px; object-fit: cover;" alt="Home Office">
+                <div>
+                  <h6 class="fw-bold text-navy mb-1">Home Office</h6>
+                  <span class="text-slate small">Focus & Productivity</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04 — THE FINISH EDIT -->
+  <section class="finish-edit py-5 position-relative" id="finish-edit">
+    <div class="container py-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <span class="finish-edit-eyebrow fw-bold text-uppercase tracking-widest fs-8 d-block mb-3">Material Education</span>
+          <h2 class="display-5 fw-bold mb-0">The Beauty Is in the Finish.</h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="lead mb-0">Paint color is only half the story. The sheen level dictates how light reflects across your walls and how effectively the surface resists wear.</p>
+        </div>
+      </div>
+
+      <div class="finish-edit-grid rounded-4 overflow-hidden shadow-sm">
+        <div class="finish-edit-column">
+          <div class="finish-edit-card h-100">
+            <div class="finish-sheen finish-sheen--matte mb-4" aria-hidden="true"></div>
+            <h4 class="fw-bold mb-3">Matte / Flat</h4>
+            <p class="small mb-4">Absorbs light perfectly, hiding drywall imperfections beautifully.</p>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Ceilings</li>
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Adult Bedrooms</li>
+              <li><i class="bi bi-check2 finish-edit-check me-2"></i> Low-traffic areas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="finish-edit-column">
+          <div class="finish-edit-card h-100">
+            <div class="finish-sheen finish-sheen--eggshell mb-4" aria-hidden="true"></div>
+            <h4 class="fw-bold mb-3">Eggshell</h4>
+            <p class="small mb-4">A velvety, low-luster glow that offers an ideal balance of aesthetics and washability.</p>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Living Rooms</li>
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Hallways</li>
+              <li><i class="bi bi-check2 finish-edit-check me-2"></i> Family Rooms</li>
+            </ul>
+          </div>
+        </div>
+        <div class="finish-edit-column">
+          <div class="finish-edit-card h-100">
+            <div class="finish-sheen finish-sheen--satin mb-4" aria-hidden="true"></div>
+            <h4 class="fw-bold mb-3">Satin</h4>
+            <p class="small mb-4">A smooth, pearl-like shine that resists moisture and heavy scrubbing.</p>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Kitchens</li>
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Bathrooms</li>
+              <li><i class="bi bi-check2 finish-edit-check me-2"></i> Kids' Rooms</li>
+            </ul>
+          </div>
+        </div>
+        <div class="finish-edit-column">
+          <div class="finish-edit-card h-100">
+            <div class="finish-sheen finish-sheen--gloss mb-4" aria-hidden="true"></div>
+            <h4 class="fw-bold mb-3">Semi-Gloss</h4>
+            <p class="small mb-4">Highly reflective and exceptionally durable, providing beautiful architectural contrast.</p>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Doors & Trim</li>
+              <li class="mb-2"><i class="bi bi-check2 finish-edit-check me-2"></i> Baseboards</li>
+              <li><i class="bi bi-check2 finish-edit-check me-2"></i> Cabinets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="blog.html#paint-finishes" class="btn home-action home2-theme-action">Read the Complete Finish Guide <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — ARCHITECTURAL DETAILS SPOTLIGHT -->
+  <section class="py-5 my-5" id="architectural-details">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="home2-detail-gallery" role="group" aria-label="Painted doors, molding, and trim inspiration">
+            <figure class="home2-detail-photo home2-detail-photo--featured">
+              <img src="assets/images/home-02/detail-painted-door.webp" srcset="assets/images/home-02/detail-painted-door-480.webp 480w, assets/images/home-02/detail-painted-door-800.webp 800w, assets/images/home-02/detail-painted-door.webp 1200w" sizes="(min-width: 1400px) 636px, (min-width: 1200px) 546px, (min-width: 992px) 456px, (min-width: 768px) 696px, (min-width: 576px) 516px, calc(100vw - 24px)" width="1200" height="800" loading="lazy" decoding="async" alt="Warm greige paneled door with smooth satin paint, white casing, and a brass handle">
+              <figcaption>Refined door finishes</figcaption>
+            </figure>
+            <figure class="home2-detail-photo">
+              <img src="assets/images/home-02/detail-crown-molding.webp" srcset="assets/images/home-02/detail-crown-molding-480.webp 480w, assets/images/home-02/detail-crown-molding.webp 800w" sizes="(min-width: 1400px) 310px, (min-width: 1200px) 265px, (min-width: 992px) 220px, (min-width: 768px) 340px, (min-width: 576px) 250px, (min-width: 400px) calc((100vw - 40px) / 2), calc(100vw - 24px)" width="800" height="533" loading="lazy" decoding="async" alt="Crisp white stepped crown molding meeting a warm neutral painted wall">
+              <figcaption>Crisp crown molding</figcaption>
+            </figure>
+            <figure class="home2-detail-photo">
+              <img src="assets/images/home-02/detail-baseboard-trim.webp" srcset="assets/images/home-02/detail-baseboard-trim-480.webp 480w, assets/images/home-02/detail-baseboard-trim.webp 800w" sizes="(min-width: 1400px) 310px, (min-width: 1200px) 265px, (min-width: 992px) 220px, (min-width: 768px) 340px, (min-width: 576px) 250px, (min-width: 400px) calc((100vw - 40px) / 2), calc(100vw - 24px)" width="800" height="533" loading="lazy" decoding="async" alt="Fresh white baseboards and door trim beside a charcoal door and oak floor">
+              <figcaption>Precision trim work</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-3">Refining the Canvas</span>
+          <h2 class="display-6 fw-bold text-navy mb-4">Small Architectural Details. Remarkable Impact.</h2>
+          <p class="text-slate lead mb-4">A room is defined by its borders. Freshly painted baseboards, flawless crown molding, and crisp interior doors elevate the standard of the entire space.</p>
+          <p class="text-slate mb-5">We specialize in detailed trim and enamel work, turning dated or scuffed woodwork into pristine architectural frames using premium self-leveling paints.</p>
+          <a href="services.html#trim-door-painting" class="btn btn-navy rounded-pill px-4 py-2 fw-bold">Explore Detail Painting <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06 — BEFORE THE BRUSH -->
+  <section class="py-5 bg-light border-top border-soft" id="before-the-brush">
+    <div class="container py-4">
+      <div class="text-center mb-5 pb-3">
+        <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-2">Our Craft</span>
+        <h2 class="display-6 fw-bold text-navy mb-0">What Happens Before Beautiful Paintwork?</h2>
+      </div>
+      
+      <div class="bg-white rounded-4 shadow-sm border border-soft p-2 overflow-hidden">
+        <div class="row g-0">
+          <div class="col-lg-4 border-end border-soft">
+            <div class="nav flex-column nav-pills p-3" id="prep-tabs" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active text-start py-4 border-bottom border-soft fw-bold d-flex align-items-center" id="prep-1-tab" data-bs-toggle="pill" data-bs-target="#prep-1" type="button" role="tab">
+                <span class="badge bg-navy rounded-circle me-3">1</span> Surface Protection
+              </button>
+              <button class="nav-link text-start py-4 border-bottom border-soft fw-bold d-flex align-items-center" id="prep-2-tab" data-bs-toggle="pill" data-bs-target="#prep-2" type="button" role="tab">
+                <span class="badge bg-navy rounded-circle me-3">2</span> Filling & Repair
+              </button>
+              <button class="nav-link text-start py-4 border-bottom border-soft fw-bold d-flex align-items-center" id="prep-3-tab" data-bs-toggle="pill" data-bs-target="#prep-3" type="button" role="tab">
+                <span class="badge bg-navy rounded-circle me-3">3</span> Sanding Smooth
+              </button>
+              <button class="nav-link text-start py-4 border-bottom border-soft fw-bold d-flex align-items-center" id="prep-4-tab" data-bs-toggle="pill" data-bs-target="#prep-4" type="button" role="tab">
+                <span class="badge bg-navy rounded-circle me-3">4</span> Dedicated Priming
+              </button>
+              <button class="nav-link text-start py-4 fw-bold d-flex align-items-center" id="prep-5-tab" data-bs-toggle="pill" data-bs-target="#prep-5" type="button" role="tab">
+                <span class="badge bg-navy rounded-circle me-3">5</span> Flawless Application
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="tab-content h-100 p-5 d-flex flex-column justify-content-center" id="prep-tabContent">
+              <div class="tab-pane fade show active" id="prep-1" role="tabpanel">
+                <h3 class="fw-bold text-navy mb-3">Rigorous Surface Protection</h3>
+                <p class="text-slate lead">Before opening a single can of paint, we protect your home. Furniture is moved and draped in clean plastic. Hardwood floors are protected with heavy builder's paper, and carpets are shielded with edge-to-edge plastic film.</p>
+              </div>
+              <div class="tab-pane fade" id="prep-2" role="tabpanel">
+                <h3 class="fw-bold text-navy mb-3">Comprehensive Filling & Repair</h3>
+                <p class="text-slate lead">Nail holes, drywall dents, and stress cracks are meticulously patched using high-grade joint compound. On exterior surfaces or woodwork, we use specialized epoxy wood fillers to reconstruct damaged areas.</p>
+              </div>
+              <div class="tab-pane fade" id="prep-3" role="tabpanel">
+                <h3 class="fw-bold text-navy mb-3">Sanding for Perfection</h3>
+                <p class="text-slate lead">Patched areas are pole-sanded perfectly flush with the wall. Glossy trim is deglossed to ensure mechanical adhesion, removing the "nibs" and imperfections from decades of previous paint layers.</p>
+              </div>
+              <div class="tab-pane fade" id="prep-4" role="tabpanel">
+                <h3 class="fw-bold text-navy mb-3">Spot & Full Priming</h3>
+                <p class="text-slate lead">Bare wood, new drywall patches, and heavily stained areas receive targeted primers. This blocks stains from bleeding through and prevents "flashing"—where patched areas look dull under the final finish.</p>
+              </div>
+              <div class="tab-pane fade" id="prep-5" role="tabpanel">
+                <h3 class="fw-bold text-navy mb-3">The Final Application</h3>
+                <p class="text-slate lead">Only after exhaustive preparation do we apply the final coats. Using precise cut-in techniques and premium applicators, we lay down two generous coats of paint for rich, uniform coverage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 07 — A HOME IN HARMONY -->
+  <section class="py-5 my-5" id="home-harmony">
+    <div class="container">
+      <div class="text-center mb-5 pb-4">
+        <h2 class="display-6 fw-bold text-navy mb-3">Colors That Flow Beautifully From Room to Room.</h2>
+        <p class="lead text-slate max-w-700 mx-auto">Whole-home coordination is about establishing a foundational neutral palette and pulling coordinating undertones through hallways and open spaces.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Room 1 -->
+        <div class="col-md-4">
+          <div class="card border-0 bg-transparent">
+            <img src="assets/images/home-02/harmony-living.webp" class="rounded-4 w-100 shadow-sm mb-4" style="height: 280px; object-fit: cover;" alt="Living Room Flow">
+            <h5 class="fw-bold text-navy mb-2">The Central Living Space</h5>
+            <p class="text-slate small mb-3">Grounded with a warm, unifying off-white that maximizes natural sunlight.</p>
+            <div class="d-flex gap-2">
+              <div class="rounded-circle shadow-sm" style="width:24px; height:24px; background:#FAF8F5;"></div>
+              <div class="rounded-circle shadow-sm" style="width:24px; height:24px; background:#EDE2D3;"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Room 2 -->
+        <div class="col-md-4">
+          <div class="card border-0 bg-transparent">
+            <img src="assets/images/home-02/harmony-hall.webp" class="rounded-4 w-100 shadow-sm mb-4" style="height: 280px; object-fit: cover;" alt="Hallway Connection">
+            <h5 class="fw-bold text-navy mb-2">The Transition Hallway</h5>
+            <p class="text-slate small mb-3">A slightly deeper greige visually connects the open living area to the private bedrooms.</p>
+            <div class="d-flex gap-2">
+              <div class="rounded-circle shadow-sm" style="width:24px; height:24px; background:#EDE2D3;"></div>
+              <div class="rounded-circle shadow-sm" style="width:24px; height:24px; background:#C1B8AD;"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Room 3 -->
+        <div class="col-md-4">
+          <div class="card border-0 bg-transparent">
+            <img src="assets/images/home-02/dining-accent-interior.webp" width="1200" height="800" loading="lazy" decoding="async" class="rounded-4 w-100 shadow-sm mb-4" style="height: 280px; object-fit: cover;" alt="Dining room with a deep navy paneled accent wall, oak table and cream chairs">
+            <h5 class="fw-bold text-navy mb-2">The Dining Accent</h5>
+            <p class="text-slate small mb-3">A dramatic, saturated accent color introduced cleanly on a structured dining room wall.</p>
+            <div class="d-flex gap-2">
+              <div class="rounded-circle shadow-sm" style="width:24px; height:24px; background:#142E4A;"></div>
+              <div class="rounded-circle shadow-sm" style="width:24px; height:24px; background:#FFFFFF;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5 pt-3">
+        <a href="services.html#whole-house-painting" class="btn home-action home2-theme-action">Explore Whole House Painting <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 08 — PAINTING MATERIALS & FINISH SELECTION -->
+  <section class="py-5 bg-light border-top border-soft" id="material-library">
+    <div class="container py-4">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-2">The Material Library</span>
+          <h2 class="display-6 fw-bold text-navy mb-0">Choosing the Right Coating for Every Surface.</h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Interior Walls -->
+        <div class="col-md-6 col-lg-4">
+          <div class="bg-white p-5 rounded-4 shadow-sm border border-soft h-100 border-top-4 border-navy">
+            <h5 class="fw-bold text-navy mb-3">Interior Wall Coatings</h5>
+            <p class="text-slate small mb-4">Premium 100% acrylic latex paints designed for smooth application, high hide, and zero VOCs for healthy indoor air quality.</p>
+            <span class="badge bg-light text-navy border">Eggshell</span> <span class="badge bg-light text-navy border">Matte</span>
+          </div>
+        </div>
+        <!-- Trim Enamels -->
+        <div class="col-md-6 col-lg-4">
+          <div class="bg-white p-5 rounded-4 shadow-sm border border-soft h-100 border-top-4 border-gold">
+            <h5 class="fw-bold text-navy mb-3">Cabinet & Trim Enamels</h5>
+            <p class="text-slate small mb-4">Urethane-acrylic hybrid enamels that cure to a hard, factory-like shell. Resists chipping and hand oils on doors and cabinets.</p>
+            <span class="badge bg-light text-navy border">Semi-Gloss</span> <span class="badge bg-light text-navy border">Satin</span>
+          </div>
+        </div>
+        <!-- Exterior Masonry -->
+        <div class="col-md-6 col-lg-4">
+          <div class="bg-white p-5 rounded-4 shadow-sm border border-soft h-100 border-top-4 border-navy">
+            <h5 class="fw-bold text-navy mb-3">Exterior Masonry & Siding</h5>
+            <p class="text-slate small mb-4">High-build exterior coatings with flexible elastomeric properties to bridge hairline stucco cracks and resist harsh UV fading.</p>
+            <span class="badge bg-light text-navy border">Satin</span> <span class="badge bg-light text-navy border">Flat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 09 — DESIGN-LED EXTERIOR INSPIRATION -->
+  <section class="py-5 my-5" id="exterior-inspiration">
+    <div class="container">
+      <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="min-height: 600px;">
+        <img src="assets/images/home-02/exterior-hero.webp" class="w-100 h-100 position-absolute top-0 start-0" style="object-fit: cover;" alt="Modern Exterior">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-navy opacity-50"></div>
+        
+        <div class="position-relative z-1 p-5 d-flex flex-column h-100 justify-content-center text-center">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-3 text-white">Exterior Aesthetics</span>
+          <h2 class="display-4 fw-bold text-white mb-4">Make an Impression Before You Step Inside.</h2>
+          <p class="lead text-white-50 max-w-600 mx-auto mb-5">From sleek monochromatic modern facades to classic contrasting trim and bold entry doors, exterior paint is your property's first statement.</p>
+          
+          <div class="d-flex justify-content-center gap-4 mb-5 flex-wrap">
+            <div class="bg-white p-3 rounded-4 shadow-sm d-flex align-items-center gap-3">
+              <div class="rounded-circle border" style="width:30px; height:30px; background:#FAF8F5;"></div>
+              <div class="text-start">
+                <span class="fw-bold text-navy d-block fs-7">Warm Facade</span>
+                <span class="text-slate small">Swiss Coffee</span>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-4 shadow-sm d-flex align-items-center gap-3">
+              <div class="rounded-circle border" style="width:30px; height:30px; background:#142E4A;"></div>
+              <div class="text-start">
+                <span class="fw-bold text-navy d-block fs-7">Modern Trim</span>
+                <span class="text-slate small">Midnight Navy</span>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <a href="services.html#exterior-painting" class="btn home-action home2-theme-action px-5 py-3">Explore Exterior Painting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10 — INTERACTIVE COLOR MOOD BOARD -->
+  <section class="py-5 bg-light border-top border-soft" id="interactive-mood-board">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-3">Interactive Canvas</span>
+          <h2 class="display-5 fw-bold text-navy mb-4">Build a Palette That Feels Like You.</h2>
+          <p class="text-slate lead mb-5">Select a primary wall color, coordinate an accent wall, and choose a trim finish to visualize how your custom palette comes together.</p>
+          
+          <div class="mb-4">
+            <h6 class="fw-bold text-navy mb-3">1. Wall Color</h6>
+            <div class="d-flex gap-2 flex-wrap moodboard-selector" data-target="wall">
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0 active" style="width:40px; height:40px; background-color:#FAF8F5;" data-hex="#FAF8F5" data-name="Warm Ivory" title="Warm Ivory"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#EDE2D3;" data-hex="#EDE2D3" data-name="Soft Beige" title="Soft Beige"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#B2C2CF;" data-hex="#B2C2CF" data-name="Dusty Blue" title="Dusty Blue"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#7B8B6F;" data-hex="#7B8B6F" data-name="Sage Green" title="Sage Green"></button>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h6 class="fw-bold text-navy mb-3">2. Accent Color</h6>
+            <div class="d-flex gap-2 flex-wrap moodboard-selector" data-target="accent">
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#B89562;" data-hex="#B89562" data-name="Champagne Gold" title="Champagne Gold"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#142E4A;" data-hex="#142E4A" data-name="Midnight Navy" title="Midnight Navy"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0 active" style="width:40px; height:40px; background-color:#4A5D43;" data-hex="#4A5D43" data-name="Deep Forest" title="Deep Forest"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#8A5A44;" data-hex="#8A5A44" data-name="Deep Earth" title="Deep Earth"></button>
+            </div>
+          </div>
+          <div class="mb-5">
+            <h6 class="fw-bold text-navy mb-3">3. Trim Color</h6>
+            <div class="d-flex gap-2 flex-wrap moodboard-selector" data-target="trim">
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0 active" style="width:40px; height:40px; background-color:#FFFFFF;" data-hex="#FFFFFF" data-name="Brilliant White" title="Brilliant White"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#F5EBE6;" data-hex="#F5EBE6" data-name="Warm Blush" title="Warm Blush"></button>
+              <button class="btn btn-color-swatch rounded-circle shadow-sm border p-0" style="width:40px; height:40px; background-color:#19324D;" data-hex="#19324D" data-name="Deep Navy" title="Deep Navy"></button>
+            </div>
+          </div>
+          
+          <button id="btnCopyPalette" class="btn btn-outline-navy rounded-pill px-4 fw-bold"><i class="bi bi-clipboard me-2"></i> Copy Hex Values</button>
+        </div>
+        
+        <div class="col-lg-7">
+          <div class="bg-white p-4 p-md-5 rounded-4 shadow-lg border border-soft">
+            <div class="d-flex flex-column gap-3 h-100">
+              <div id="mb-wall" class="rounded-4 transition-fast shadow-sm d-flex align-items-end p-4" style="height: 250px; background-color: #FAF8F5;">
+                <span class="bg-white px-3 py-2 rounded-pill shadow-sm fw-bold text-navy fs-8">Wall: <span id="mb-wall-label">Warm Ivory</span></span>
+              </div>
+              <div class="row g-3">
+                <div class="col-8">
+                  <div id="mb-accent" class="rounded-4 transition-fast shadow-sm d-flex align-items-end p-4" style="height: 150px; background-color: #4A5D43;">
+                    <span class="bg-white px-3 py-2 rounded-pill shadow-sm fw-bold text-navy fs-8">Accent: <span id="mb-accent-label">Deep Forest</span></span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div id="mb-trim" class="rounded-4 transition-fast shadow-sm d-flex align-items-end p-4" style="height: 150px; background-color: #FFFFFF; border: 1px solid #E8E9EB;">
+                    <span class="bg-white border px-3 py-2 rounded-pill shadow-sm fw-bold text-navy fs-8 d-none d-md-inline">Trim: <span id="mb-trim-label">White</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11 — STYLE SPOTLIGHTS -->
+  <section class="py-5 my-5" id="style-spotlights">
+    <div class="container">
+      <div class="text-center mb-5 pb-3">
+        <h2 class="display-6 fw-bold text-navy mb-0">Find Your Home's Color Personality.</h2>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 bg-transparent mb-4 group">
+            <div class="rounded-4 overflow-hidden shadow-sm mb-3 position-relative">
+              <img src="assets/images/home-02/style-minimalist.webp" class="w-100 transition-fast group-hover:scale-105" style="height: 400px; object-fit: cover;" alt="Modern Minimalist">
+            </div>
+            <h4 class="fw-bold text-navy mb-2">Modern Minimalist</h4>
+            <p class="text-slate small mb-3">Crisp whites, sharp contrasts, and completely matte finishes let architecture and light speak for themselves.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 bg-transparent mb-4 group">
+            <div class="rounded-4 overflow-hidden shadow-sm mb-3 position-relative">
+              <img src="assets/images/home-02/style-coastal.webp" class="w-100 transition-fast group-hover:scale-105" style="height: 400px; object-fit: cover;" alt="Coastal Calm">
+            </div>
+            <h4 class="fw-bold text-navy mb-2">Coastal Calm</h4>
+            <p class="text-slate small mb-3">Breezy linen whites, soft sea-glass greens, and dusty blues create an airy, relaxed sanctuary.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 bg-transparent mb-4 group">
+            <div class="rounded-4 overflow-hidden shadow-sm mb-3 position-relative">
+              <img src="assets/images/home-02/bold-architectural.webp" srcset="assets/images/home-02/bold-architectural.webp 1200w, assets/images/home-02/bold-architectural-4k.webp 3840w" sizes="(min-width: 1400px) 416px, (min-width: 768px) 33vw, 100vw" width="3840" height="2160" loading="lazy" decoding="async" class="w-100 transition-fast group-hover:scale-105" style="height: 400px; object-fit: cover;" alt="Modern home with deep blue and forest-green painted walls, charcoal trim and warm interior lighting">
+            </div>
+            <h4 class="fw-bold text-navy mb-2">Bold Architectural</h4>
+            <p class="text-slate small mb-3">Deep jewel tones, monochromatic dark trim, and saturated feature walls create dramatic, moody elegance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- SECTION 12 ? THE CHROMORA CRAFT GALLERY -->
+  <section class="home2-craft-gallery" id="craftsmanship-gallery">
+    <div class="container">
+
+      <!-- Gallery Header -->
+      <div class="row align-items-end home2-craft-header g-4">
+        <div class="col-lg-7">
+          <span class="home2-craft-eyebrow">The Chromora Craft</span>
+          <h2 class="display-5 fw-bold mb-0">Every Detail Makes a Difference.</h2>
+        </div>
+        <div class="col-lg-5">
+          <div class="home2-craft-intro">
+            <p class="lead fs-6 mb-4">Explore the thoughtful preparation, refined finishes, and beautifully painted spaces that bring a home transformation together.</p>
+            <a href="projects.html" class="home2-craft-portfolio">View Full Portfolio <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="home2-craft-grid">
+        
+        <!-- Image 01: Featured Exterior -->
+        <a href="projects.html#modern-exterior-repaint" class="home2-craft-item home2-craft-item--featured">
+          <img src="assets/images/home-02/craft-exterior.webp" srcset="assets/images/home-02/craft-exterior-480.webp 480w, assets/images/home-02/craft-exterior-800.webp 800w, assets/images/home-02/craft-exterior.webp 1080w" sizes="(min-width: 1400px) 648px, (min-width: 1200px) 558px, (min-width: 992px) 458px, (min-width: 768px) 338px, calc(100vw - 24px)" width="1080" height="1440" loading="lazy" decoding="async" alt="Warm-white house facade with charcoal window trim and landscaped entry garden">
+          <div class="home2-craft-overlay">
+            <div class="home2-craft-content">
+              <span class="home2-craft-cat">Exterior Painting</span>
+              <h3>Beautiful Exterior Finishes</h3>
+              <p class="home2-craft-desc">Thoughtfully selected exterior colors that highlight architecture and enhance curb appeal.</p>
+            </div>
+          </div>
+          <span class="home2-craft-icon" aria-hidden="true">↗</span>
+        </a>
+
+        <!-- Image 02: Cabinet Refinishing -->
+        <a href="projects.html#sage-kitchen-cabinets" class="home2-craft-item">
+          <img src="assets/images/home-02/craft-cabinets.webp" srcset="assets/images/home-02/craft-cabinets-480.webp 480w, assets/images/home-02/craft-cabinets-800.webp 800w, assets/images/home-02/craft-cabinets.webp 1080w" sizes="(min-width: 1400px) 312px, (min-width: 1200px) 267px, (min-width: 992px) 458px, (min-width: 768px) 338px, calc(100vw - 24px)" width="1080" height="1440" loading="lazy" decoding="async" alt="Sage-green painted shaker cabinets with brass hardware and cream stone countertops">
+          <div class="home2-craft-overlay">
+            <div class="home2-craft-content">
+              <span class="home2-craft-cat">Cabinet Painting</span>
+              <h3>Refined Cabinet Finishes</h3>
+              <p class="home2-craft-desc">Carefully prepared cabinetry with smooth, coordinated painted finishes.</p>
+            </div>
+          </div>
+          <span class="home2-craft-icon" aria-hidden="true">↗</span>
+        </a>
+
+        <!-- Image 03: Interior Wall -->
+        <a href="projects.html#contemporary-living-room" class="home2-craft-item">
+          <img src="assets/images/home-02/craft-interior.webp" srcset="assets/images/home-02/craft-interior-480.webp 480w, assets/images/home-02/craft-interior-800.webp 800w, assets/images/home-02/craft-interior.webp 1080w" sizes="(min-width: 1400px) 312px, (min-width: 1200px) 267px, (min-width: 992px) 458px, (min-width: 768px) 338px, calc(100vw - 24px)" width="1080" height="1440" loading="lazy" decoding="async" alt="Sunlit living room with muted-sage painted walls, white crown molding and linen furniture">
+          <div class="home2-craft-overlay">
+            <div class="home2-craft-content">
+              <span class="home2-craft-cat">Interior Painting</span>
+              <h3>Beautiful Interior Spaces</h3>
+              <p class="home2-craft-desc">Carefully finished walls and thoughtfully coordinated colors for welcoming rooms.</p>
+            </div>
+          </div>
+          <span class="home2-craft-icon" aria-hidden="true">↗</span>
+        </a>
+
+        <!-- Image 04: Wide Trim -->
+        <a href="projects.html#refined-door-trim" class="home2-craft-item home2-craft-item--wide">
+          <img src="assets/images/home-02/craft-trim-doors.webp" srcset="assets/images/home-02/craft-trim-doors-480.webp 480w, assets/images/home-02/craft-trim-doors-800.webp 800w, assets/images/home-02/craft-trim-doors.webp 1600w" sizes="(min-width: 1200px) 760px, (min-width: 768px) 1160px, 840px" width="1600" height="800" loading="lazy" decoding="async" alt="Charcoal paneled interior doors framed by crisp white casings, baseboards and window trim">
+          <div class="home2-craft-overlay">
+            <div class="home2-craft-content">
+              <span class="home2-craft-cat">Trim & Door Painting</span>
+              <h3>Details That Complete the Look</h3>
+              <p class="home2-craft-desc">From interior doors to decorative trim, the smallest finishing touches make a meaningful difference.</p>
+            </div>
+          </div>
+          <span class="home2-craft-icon" aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="home2-craft-footer d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+        <div>
+          <h5 class="fw-bold mb-0 fs-5">Explore More Beautiful Home Transformations.</h5>
+          <p class="home2-craft-note">AI-generated design concepts for inspiration.</p>
+        </div>
+        <a href="projects.html" class="home2-craft-portfolio">View All Projects <span aria-hidden="true">→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION 13 — PAINTING PLANNING CHECKLIST -->
+  <section class="py-5 my-5" id="planning-checklist">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="assets/images/Homesecond.jpg" class="w-100 rounded-4 shadow-lg" style="height: 600px; object-fit: cover;" alt="Planning Your Project">
+        </div>
+        <div class="col-lg-6">
+          <span class="text-gold fw-bold text-uppercase tracking-widest fs-8 d-block mb-3">Getting Started</span>
+          <h2 class="display-6 fw-bold text-navy mb-4">Your Home Refresh, Beautifully Planned.</h2>
+          <p class="text-slate lead mb-5">A successful painting project starts long before the brush touches the wall. Use this checklist to organize your thoughts before requesting an estimate.</p>
+          
+          <div class="planning-checklist">
+            <label class="d-flex align-items-center mb-3 p-3 border border-soft rounded-4 transition-fast cursor-pointer hover-bg-light">
+              <input type="checkbox" class="form-check-input ms-0 me-3 shadow-none custom-checkbox" style="width: 24px; height: 24px;">
+              <span class="text-navy fw-bold">Identify rooms or surfaces to paint</span>
+            </label>
+            <label class="d-flex align-items-center mb-3 p-3 border border-soft rounded-4 transition-fast cursor-pointer hover-bg-light">
+              <input type="checkbox" class="form-check-input ms-0 me-3 shadow-none custom-checkbox" style="width: 24px; height: 24px;">
+              <span class="text-navy fw-bold">Explore color inspiration and palettes</span>
+            </label>
+            <label class="d-flex align-items-center mb-3 p-3 border border-soft rounded-4 transition-fast cursor-pointer hover-bg-light">
+              <input type="checkbox" class="form-check-input ms-0 me-3 shadow-none custom-checkbox" style="width: 24px; height: 24px;">
+              <span class="text-navy fw-bold">Consider finish options (Matte, Eggshell, Satin)</span>
+            </label>
+            <label class="d-flex align-items-center mb-3 p-3 border border-soft rounded-4 transition-fast cursor-pointer hover-bg-light">
+              <input type="checkbox" class="form-check-input ms-0 me-3 shadow-none custom-checkbox" style="width: 24px; height: 24px;">
+              <span class="text-navy fw-bold">Review existing surface conditions (cracks, damage)</span>
+            </label>
+            <label class="d-flex align-items-center mb-3 p-3 border border-soft rounded-4 transition-fast cursor-pointer hover-bg-light">
+              <input type="checkbox" class="form-check-input ms-0 me-3 shadow-none custom-checkbox" style="width: 24px; height: 24px;">
+              <span class="text-navy fw-bold">Define a preferred timeline for the work</span>
+            </label>
+          </div>
+          
+          <div class="mt-4 pt-3 border-top border-soft d-flex justify-content-between align-items-center">
+            <span class="text-slate small fw-bold" id="checklist-progress">0 of 5 Completed</span>
+            <a href="estimate.html" class="btn btn-navy rounded-pill px-4 fw-bold">Request Estimate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 14 — RESIDENTIAL PAINTING QUESTIONS & ANSWERS -->
+  <section class="py-5 bg-light border-top border-soft" id="studio-faq">
+    <div class="container py-4">
+      <div class="text-center mb-5 pb-3">
+        <h2 class="display-6 fw-bold text-navy mb-0">Thoughtful Answers for Your Next Home Refresh.</h2>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion accordion-flush bg-transparent" id="studioFaqAcc">
+            <div class="accordion-item bg-transparent border-bottom border-soft">
+              <h2 class="accordion-header"><button class="accordion-button bg-transparent shadow-none fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#sf1">How do I test paint samples correctly?</button></h2>
+              <div id="sf1" class="accordion-collapse collapse show" data-bs-parent="#studioFaqAcc"><div class="accordion-body text-slate">Never paint tiny squares directly on the wall. Paint large pieces of poster board and move them around the room over several days to observe how they react to morning, afternoon, and artificial evening light.</div></div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom border-soft">
+              <h2 class="accordion-header"><button class="accordion-button collapsed bg-transparent shadow-none fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#sf2">Should I paint my ceiling flat white?</button></h2>
+              <div id="sf2" class="accordion-collapse collapse" data-bs-parent="#studioFaqAcc"><div class="accordion-body text-slate">While flat white is standard and safe, consider "color drenching" (painting walls, trim, and ceiling the same color) for a cozy, modern look, or painting the ceiling a soft contrasting tint to draw the eye up.</div></div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom border-soft">
+              <h2 class="accordion-header"><button class="accordion-button collapsed bg-transparent shadow-none fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#sf3">What is the best order to paint a room?</button></h2>
+              <div id="sf3" class="accordion-collapse collapse" data-bs-parent="#studioFaqAcc"><div class="accordion-body text-slate">Professional painters typically work top-down: Ceilings first, followed by walls, and finally the baseboards and trim. This prevents drips from ruining freshly finished lower surfaces.</div></div>
+            </div>
+            <div class="accordion-item bg-transparent border-bottom border-soft">
+              <h2 class="accordion-header"><button class="accordion-button collapsed bg-transparent shadow-none fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#sf4">Do I need to prime previously painted walls?</button></h2>
+              <div id="sf4" class="accordion-collapse collapse" data-bs-parent="#studioFaqAcc"><div class="accordion-body text-slate">If you are painting over a similar sheen and color, high-quality paint-and-primer-in-one is usually sufficient. However, if you are painting over gloss, covering a dark color, or painting over patched drywall, a dedicated primer is absolutely necessary.</div></div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-5">
+            <a href="blog.html" class="btn home-action home2-theme-action">Read the Inspiration Blog <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-5">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 pe-lg-5">
+          <a class="navbar-brand d-flex align-items-center mb-4" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+          <p class="text-slate small mb-4">Premium residential painting services. Discover modern finishes, thoughtful color selection, and meticulous craftsmanship for your home.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><a href="index.html" class="text-slate text-decoration-none small hover-gold transition-fast">Home</a></li>
+            <li><a href="projects.html" class="text-slate text-decoration-none small hover-gold transition-fast">Projects</a></li>
+            <li><a href="about.html" class="text-slate text-decoration-none small hover-gold transition-fast">About Us</a></li>
+            <li><a href="services.html" class="text-slate text-decoration-none small hover-gold transition-fast">Services</a></li>
+            <li><a href="contact.html" class="text-slate text-decoration-none small hover-gold transition-fast">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Get in Touch</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-telephone text-gold mt-1"></i>
+              <a href="tel:5551234567" class="text-slate text-decoration-none small hover-gold transition-fast">(555) 123-4567</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-envelope text-gold mt-1"></i>
+              <a href="mailto:hello@chromora.demo" class="text-slate text-decoration-none small hover-gold transition-fast">hello@chromora.demo</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span class="text-slate small">123 Design Avenue,<br>Creative City, ST 12345</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 no-stack footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Facebook (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-facebook fs-6"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Instagram (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-instagram fs-6"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="Log in to LinkedIn (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-linkedin fs-6"></i></a>
+            <a href="https://www.youtube.com/signin" target="_blank" rel="noopener noreferrer" aria-label="Log in to YouTube (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-youtube fs-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top pt-4 mt-4 align-items-center">
+        <div class="col-12 text-center text-md-start">
+          <p class="text-slate small mb-0">&copy; 2026 Chromora Painting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/home-02.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

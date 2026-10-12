@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+  <link rel="icon" href="assets/images/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+<title>Chromora - Premium Residential Painting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Page Scoped CSS for Home 01 Redesign -->
+  <link rel="stylesheet" href="assets/css/home-01-redesign.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('chromora-theme');
+      } catch (error) {}
+      
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : (systemDark ? 'dark' : 'light');
+      
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="redesign-header fixed-top bg-white">
+    <div class="container-fluid px-4 px-lg-5">
+      <nav class="navbar navbar-expand-xxl py-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-xxl-0 fw-semibold">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="dropdown-item" href="index.html">Home &ndash; Painting Experts</a></li>
+                <li><a class="dropdown-item" href="home-02.html">Home &ndash; Design Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="color-consultation.html">Colors</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-actions d-flex align-items-center">
+            <button id="theme-toggle-home" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-5" aria-label="Toggle Theme">
+              <i class="bi bi-moon"></i>
+            </button>
+            <button id="rtl-toggle" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-6 fw-semibold" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Switch to right-to-left layout">
+              RTL
+            </button>
+            <a href="estimate.html" class="btn btn-navy navbar-estimate rounded-pill px-4 py-2 d-flex align-items-center gap-2 fw-semibold">
+              Get Free Estimate <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<!-- SECTION 1: Premium About Hero -->
+<section class="about-hero section-padding position-relative overflow-hidden">
+  <div class="container text-center position-relative z-1">
+    <span class="d-block mb-3 fw-bold text-slate text-uppercase tracking-wide">Our Identity</span>
+    <h1 class="display-3 fw-bolder text-navy mb-4">About Chromora</h1>
+    <p class="lead max-w-700 mx-auto text-slate mb-5">Passion for beautiful homes shapes everything we do. Discover the people, process, and promise behind our premium residential painting services.</p>
+  </div>
+  <div class="container pb-5">
+    <img src="assets/images/Aboutus2.png" alt="Bright modern living room with warm neutral walls and an open kitchen" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 500px; object-fit: cover;">
+  </div>
+</section>
+
+<!-- SECTION 2: Our Story -->
+<section class="section-padding bg-white">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 position-relative" data-aos="fade-up">
+        <img src="assets/images/Aboutus.jpg" class="img-fluid rounded-4 shadow-sm d-block mx-auto" alt="House with painting tools" style="width: 100%; max-width: 420px; height: auto; object-fit: contain;">
+      </div>
+      <div class="col-lg-6 ps-lg-5" data-aos="fade-up" data-aos-delay="100">
+        <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">HOW WE STARTED</span>
+        <h2 class="fw-bold text-navy display-6 mb-4">A Decade of Transforming Homes</h2>
+        <p class="text-slate mb-3">Founded over a decade ago, Chromora began with a simple belief: a fresh coat of paint does more than change a color; it transforms how you feel in your space. We've grown from a small local crew into a leading residential painting company.</p>
+        <p class="text-slate mb-4">Our extensive experience in both interior and exterior painting ensures that we can handle any project. Our commitment to craftsmanship remains unchanged. We treat every home as if it were our own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: Our Mission & Vision -->
+<section class="mission-vision section-padding" aria-labelledby="mission-vision-heading">
+  <div class="container">
+    <div class="mission-vision-layout">
+      <figure class="mission-vision-visual">
+        <img src="assets/images/mission-vision-interior.jpg" alt="Sunlit living room with soft neutral walls, a sage accent wall, and a warm leather sofa" width="1200" height="800" loading="lazy" decoding="async">
+        <figcaption>Crafted With Care</figcaption>
+      </figure>
+      <div class="mission-vision-content">
+        <span class="mission-vision-eyebrow">What Drives Us</span>
+        <h2 id="mission-vision-heading">Driven by Purpose. Inspired by Beautiful Homes.</h2>
+        <p class="mission-vision-intro">At Chromora, we believe thoughtful color, careful preparation, and skilled craftsmanship can transform the way a home looks and feels.</p>
+        <div class="mission-vision-blocks">
+          <article class="mission-vision-block" aria-labelledby="mission-heading">
+            <span class="mission-vision-label">01 / Our Mission</span>
+            <h3 id="mission-heading">Beautiful Results, Thoughtfully Delivered.</h3>
+            <p>Deliver beautiful, long-lasting painting transformations through excellent workmanship and customer-focused service.</p>
+          </article>
+          <article class="mission-vision-block" aria-labelledby="vision-heading">
+            <span class="mission-vision-label">02 / Our Vision</span>
+            <h3 id="vision-heading">Creating Homes That Inspire.</h3>
+            <p>Help homeowners create welcoming, inspiring living spaces through quality painting and thoughtful color choices.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: Why Choose Our Painting Company -->
+<section class="section-padding bg-white">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">THE CHROMORA DIFFERENCE</span>
+      <h2 class="fw-bold text-navy display-6">Why Choose Us</h2>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-md-4" data-aos="fade-up"><div class="p-4 bg-ivory rounded-4 h-100"><i class="bi bi-hammer fs-2 text-gold mb-3 d-block"></i><h4 class="text-navy fw-bold fs-5">Professional Craftsmanship</h4><p class="text-slate small mb-0">Never compromising on quality and precision.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="p-4 bg-ivory rounded-4 h-100"><i class="bi bi-droplet-half fs-2 text-gold mb-3 d-block"></i><h4 class="text-navy fw-bold fs-5">Quality Paint Products</h4><p class="text-slate small mb-0">We use only premium, long-lasting coatings.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="p-4 bg-ivory rounded-4 h-100"><i class="bi bi-tools fs-2 text-gold mb-3 d-block"></i><h4 class="text-navy fw-bold fs-5">Surface Preparation</h4><p class="text-slate small mb-0">Thorough prep work ensures a flawless final result.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up"><div class="p-4 bg-ivory rounded-4 h-100"><i class="bi bi-stars fs-2 text-gold mb-3 d-block"></i><h4 class="text-navy fw-bold fs-5">Clean & Organized</h4><p class="text-slate small mb-0">Total respect and protection for your property.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="p-4 bg-ivory rounded-4 h-100"><i class="bi bi-chat-left-dots fs-2 text-gold mb-3 d-block"></i><h4 class="text-navy fw-bold fs-5">Clear Communication</h4><p class="text-slate small mb-0">Transparent updates from start to finish.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="p-4 bg-ivory rounded-4 h-100"><i class="bi bi-heart fs-2 text-gold mb-3 d-block"></i><h4 class="text-navy fw-bold fs-5">Customer-Focused</h4><p class="text-slate small mb-0">Your satisfaction is our ultimate priority.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: Our Journey & Achievements -->
+<section class="section-padding bg-ivory">
+  <div class="container text-center">
+    <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">ACHIEVEMENTS</span>
+    <h2 class="fw-bold text-navy display-6 mb-5">Our Journey by the Numbers</h2>
+    <div class="row g-4 border-top border-bottom py-4" data-aos="fade-up">
+      <div class="col-md-3">
+        <h3 class="fw-bolder text-navy fs-1 mb-1">2010</h3>
+        <p class="text-slate small mb-0">Founded Chromora</p>
+      </div>
+      <div class="col-md-3 border-md-start">
+        <h3 class="fw-bolder text-navy fs-1 mb-1">15+</h3>
+        <p class="text-slate small mb-0">Years Experience</p>
+      </div>
+      <div class="col-md-3 border-md-start">
+        <h3 class="fw-bolder text-navy fs-1 mb-1">2.5K+</h3>
+        <p class="text-slate small mb-0">Homes Transformed</p>
+      </div>
+      <div class="col-md-3 border-md-start">
+        <h3 class="fw-bolder text-navy fs-1 mb-1">50+</h3>
+        <p class="text-slate small mb-0">Dedicated Professionals</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: Meet Our Professional Team -->
+<section id="team" class="section-padding bg-white">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">OUR PEOPLE</span>
+      <h2 class="fw-bold text-navy display-6">Meet the Professionals</h2>
+      <p class="text-slate max-w-700 mx-auto">Our team consists of vetted, highly trained craftspeople who bring dedication, safety, and continuous improvement to every project.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card border-0 bg-ivory rounded-4 h-100 overflow-hidden text-center">
+          <img src="assets/images/John%20Doe.jpg" alt="John Doe" class="w-100" style="height: 300px; object-fit: cover; object-position: center 20%;">
+          <div class="p-4">
+            <h4 class="text-navy fw-bold fs-5 mb-1">John Doe</h4>
+            <p class="text-gold small mb-3 fw-semibold text-uppercase">Founder & Master Painter</p>
+            <p class="text-slate small mb-0">John built Chromora from the ground up, instilling his passion for perfection into every member of the team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card border-0 bg-ivory rounded-4 h-100 overflow-hidden text-center">
+          <img src="assets/images/Jane%20Smith.jpg" alt="Jane Smith" class="w-100" style="height: 300px; object-fit: cover; object-position: center 20%;">
+          <div class="p-4">
+            <h4 class="text-navy fw-bold fs-5 mb-1">Jane Smith</h4>
+            <p class="text-gold small mb-3 fw-semibold text-uppercase">Lead Color Consultant</p>
+            <p class="text-slate small mb-0">With an eye for design, Jane helps homeowners select the perfect palettes that reflect natural light and their personal style.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card border-0 bg-ivory rounded-4 h-100 overflow-hidden text-center">
+          <img src="assets/images/Mike%20Johnson.jpg" alt="Mike Johnson" class="w-100" style="height: 300px; object-fit: cover; object-position: center 20%;">
+          <div class="p-4">
+            <h4 class="text-navy fw-bold fs-5 mb-1">Mike Johnson</h4>
+            <p class="text-gold small mb-3 fw-semibold text-uppercase">Project Manager</p>
+            <p class="text-slate small mb-0">Mike ensures every project stays on schedule, overseeing surface preparation, application, and the final quality inspection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: Our Painting Process -->
+<section class="section-padding bg-ivory">
+  <div class="container text-center">
+    <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">HOW WE WORK</span>
+    <h2 class="fw-bold text-navy display-6 mb-5">Our Painting Process</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 justify-content-center g-4 position-relative">
+      <div class="col" data-aos="fade-up">
+        <div class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3" style="width: 60px; height: 60px;">1</div>
+        <h5 class="text-navy fw-bold fs-6">Initial Consultation</h5>
+      </div>
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3" style="width: 60px; height: 60px;">2</div>
+        <h5 class="text-navy fw-bold fs-6">Project Planning</h5>
+      </div>
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3" style="width: 60px; height: 60px;">3</div>
+        <h5 class="text-navy fw-bold fs-6">Surface Preparation</h5>
+      </div>
+      <div class="col" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3" style="width: 60px; height: 60px;">4</div>
+        <h5 class="text-navy fw-bold fs-6">Professional Painting</h5>
+      </div>
+      <div class="col" data-aos="fade-up" data-aos-delay="400">
+        <div class="bg-gold text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3" style="width: 60px; height: 60px;"><i class="bi bi-check-lg"></i></div>
+        <h5 class="text-navy fw-bold fs-6">Final Inspection</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: What Our Customers Say -->
+<section id="testimonials" class="section-padding bg-white">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">REVIEWS</span>
+      <h2 class="fw-bold text-navy display-6">What Our Customers Say</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="customer-review-card p-4 bg-ivory rounded-4 h-100 border border-light">
+          <div class="text-gold mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="fst-italic text-slate mb-4">"The team transformed our outdated kitchen cabinets. They look brand new! Professional, clean, and incredible attention to detail."</p>
+          <div class="customer-review-author">
+            <img src="assets/images/testimonials/sarah-jenkins-demo.jpg" alt="" class="customer-review-avatar" width="56" height="56" loading="lazy" decoding="async">
+            <div><h6 class="text-navy fw-bold mb-0">Sarah Jenkins</h6><small class="text-slate">Cabinet Refinishing</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="customer-review-card p-4 bg-ivory rounded-4 h-100 border border-light">
+          <div class="text-gold mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="fst-italic text-slate mb-4">"We hired them for a full exterior repaint. The house looks stunning. They handled all the prep work perfectly."</p>
+          <div class="customer-review-author">
+            <img src="assets/images/testimonials/michael-thompson-demo.jpg" alt="" class="customer-review-avatar" width="56" height="56" loading="lazy" decoding="async">
+            <div><h6 class="text-navy fw-bold mb-0">Michael Thompson</h6><small class="text-slate">Exterior Painting</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="customer-review-card p-4 bg-ivory rounded-4 h-100 border border-light">
+          <div class="text-gold mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <p class="fst-italic text-slate mb-4">"From color consultation to the final walkthrough, the process was seamless. Highly recommend Chromora to anyone."</p>
+          <div class="customer-review-author">
+            <img src="assets/images/testimonials/emily-davis-demo.jpg" alt="" class="customer-review-avatar" width="56" height="56" loading="lazy" decoding="async">
+            <div><h6 class="text-navy fw-bold mb-0">Emily Davis</h6><small class="text-slate">Whole House Interior</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: Our Work / Transformations -->
+<section class="section-padding bg-ivory">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+      <div>
+        <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block">OUR WORK</span>
+        <h2 class="fw-bold text-navy display-6 mb-0">Recent Transformations</h2>
+      </div>
+      <a href="projects.html" class="text-navy fw-bold text-decoration-none mt-3 mt-md-0 d-flex align-items-center gap-1">
+        View All Projects <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-up">
+        <a href="project-details.html" class="d-block position-relative overflow-hidden rounded-4 shadow-sm group">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Interior Transformation" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+          <div class="position-absolute bottom-0 start-0 w-100 p-4 bg-dark bg-opacity-50 text-white">
+            <h4 class="mb-0 text-white">Interior Transformations</h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="project-details.html" class="d-block position-relative overflow-hidden rounded-4 shadow-sm group">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Exterior Transformation" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+          <div class="position-absolute bottom-0 start-0 w-100 p-4 bg-dark bg-opacity-50 text-white">
+            <h4 class="mb-0 text-white">Exterior Enhancements</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10: Final CTA -->
+<section class="about-cta section-padding bg-navy position-relative overflow-hidden">
+  <div class="about-cta-decoration" aria-hidden="true">
+    <i class="bi bi-house-door-fill"></i>
+  </div>
+  <div class="container position-relative z-1">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8 about-cta-content" data-aos="zoom-in">
+        <h2 class="display-4 fw-bold text-white mb-4">Let's Bring New Life to Your Home.</h2>
+        <p class="lead about-cta-description mb-4">From refreshing one room to transforming your entire home, our team is ready to help bring your vision to life.</p>
+        <a href="estimate.html" class="btn btn-gold rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center justify-content-center gap-2">
+          Get Free Estimate <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-5">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 pe-lg-5">
+          <a class="navbar-brand d-flex align-items-center mb-4" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+          <p class="text-slate small mb-4">Premium residential painting services. Discover modern finishes, thoughtful color selection, and meticulous craftsmanship for your home.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><a href="index.html" class="text-slate text-decoration-none small hover-gold transition-fast">Home</a></li>
+            <li><a href="projects.html" class="text-slate text-decoration-none small hover-gold transition-fast">Projects</a></li>
+            <li><a href="about.html" class="text-slate text-decoration-none small hover-gold transition-fast">About Us</a></li>
+            <li><a href="services.html" class="text-slate text-decoration-none small hover-gold transition-fast">Services</a></li>
+            <li><a href="contact.html" class="text-slate text-decoration-none small hover-gold transition-fast">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Get in Touch</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-telephone text-gold mt-1"></i>
+              <a href="tel:5551234567" class="text-slate text-decoration-none small hover-gold transition-fast">(555) 123-4567</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-envelope text-gold mt-1"></i>
+              <a href="mailto:hello@chromora.demo" class="text-slate text-decoration-none small hover-gold transition-fast">hello@chromora.demo</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span class="text-slate small">123 Design Avenue,<br>Creative City, ST 12345</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 no-stack footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Facebook (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-facebook fs-6"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Instagram (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-instagram fs-6"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="Log in to LinkedIn (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-linkedin fs-6"></i></a>
+            <a href="https://www.youtube.com/signin" target="_blank" rel="noopener noreferrer" aria-label="Log in to YouTube (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-youtube fs-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top pt-4 mt-4 align-items-center">
+        <div class="col-12 text-center text-md-start">
+          <p class="text-slate small mb-0">&copy; 2026 Chromora Painting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

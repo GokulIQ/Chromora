@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+  <link rel="icon" href="assets/images/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+<title>Chromora - Premium Residential Painting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Page Scoped CSS for Home 01 Redesign -->
+  <link rel="stylesheet" href="assets/css/home-01-redesign.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('chromora-theme');
+      } catch (error) {}
+      
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : (systemDark ? 'dark' : 'light');
+      
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/service-details.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="redesign-header fixed-top bg-white">
+    <div class="container-fluid px-4 px-lg-5">
+      <nav class="navbar navbar-expand-xxl py-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-xxl-0 fw-semibold">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="dropdown-item" href="index.html">Home &ndash; Painting Experts</a></li>
+                <li><a class="dropdown-item" href="home-02.html">Home &ndash; Design Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html" aria-current="page">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="color-consultation.html">Colors</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-actions d-flex align-items-center">
+            <button id="theme-toggle-home" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-5" aria-label="Toggle Theme">
+              <i class="bi bi-moon"></i>
+            </button>
+            <button id="rtl-toggle" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-6 fw-semibold" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Switch to right-to-left layout">
+              RTL
+            </button>
+            <a href="estimate.html" class="btn btn-navy navbar-estimate rounded-pill px-4 py-2 d-flex align-items-center gap-2 fw-semibold">
+              Get Free Estimate <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<style>
+/* REDESIGNED SERVICES PAGE STYLES */
+.hero-compact { background-color: var(--color-surface); padding: calc(84px + clamp(24px, 3vw, 48px)) 0 80px; border-bottom: 1px solid var(--color-border); overflow: hidden; }
+.hero-image-wrapper { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+.hero-image-wrapper::after { content: ''; position: absolute; bottom: -20px; right: -20px; width: 150px; height: 150px; border-radius: 50%; background-color: var(--color-accent); z-index: -1; opacity: 0.2; }
+
+/* Filter & Search Bar */
+.filter-bar { position: sticky; top: var(--header-height, 85px); z-index: 1020; background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 15px 0; }
+.service-filter-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); gap: 16px; align-items: center; }
+.service-filter-layout .filter-pills { min-width: 0; padding: 5px 3px; }
+.service-filter-layout .search-wrapper { max-width: none; }
+.service-filter-layout .filter-pill { min-height: 44px; }
+.service-filter-layout .filter-pill:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@media (max-width: 991.98px) {
+  .service-filter-layout { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}
+.filter-pills { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+.filter-pills::-webkit-scrollbar { display: none; }
+.filter-pill { background: var(--color-section-alt); color: var(--color-text); border: 1px solid var(--color-border); padding: 8px 16px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; white-space: nowrap; cursor: pointer; transition: all 0.2s ease; }
+.filter-pill:hover { border-color: var(--color-accent); color: var(--color-heading); }
+.filter-pill.active { background: var(--color-heading); color: var(--color-surface); border-color: var(--color-heading); }
+.search-wrapper { position: relative; max-width: 300px; width: 100%; }
+.search-input { padding-left: 40px; border-radius: 50px; border: 1px solid var(--color-border); background: var(--color-section-alt); color: var(--color-text); }
+.search-input:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(184, 149, 98, 0.2); }
+.search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-text); opacity: 0.6; }
+
+/* Service Cards Grid */
+.service-card { border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; background: var(--color-surface); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+.service-card-body { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+.service-badge { display: inline-block; padding: 4px 10px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: var(--color-section-alt); color: var(--color-accent); border-radius: 4px; margin-bottom: 12px; }
+.service-card-title { font-weight: 700; color: var(--color-heading); font-size: 1.25rem; margin-bottom: 12px; }
+.service-card-desc { color: var(--color-text); font-size: 0.9rem; margin-bottom: 16px; flex-grow: 1; }
+.service-card-highlights { list-style: none; padding: 0; margin: 0 0 20px 0; border-top: 1px solid var(--color-border); padding-top: 16px; }
+.service-card-highlights li { font-size: 0.85rem; color: var(--color-text); margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
+.service-card-highlights i { color: var(--color-accent); margin-top: 2px; }
+.service-card-footer { display: flex; gap: 10px; flex-wrap: wrap; }
+
+</style>
+
+<!-- SECTION 1: PREMIUM COMPACT HERO -->
+<section class="hero-compact">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-up">
+        <span class="d-block mb-3 fw-bold text-gold text-uppercase tracking-wide fs-7">OUR EXPERTISE</span>
+        <h1 class="display-5 fw-bolder text-navy mb-4">Professional Painting for Every Space.</h1>
+        <p class="lead text-slate mb-5 fs-6 max-w-500">From beautiful interior finishes to long-lasting exterior transformations, discover thoughtful painting solutions designed to refresh, protect, and enhance your home.</p>
+        <div class="hero-actions">
+          <a href="estimate.html" class="btn hero-button-primary">
+            Get Free Estimate <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="#catalog" class="btn hero-button-secondary">
+            Explore Services
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Beautiful Modern Home Interior" class="w-100" style="height: 450px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: SERVICE DISCOVERY & FILTERS -->
+<div class="filter-bar" id="catalog">
+  <div class="container">
+    <div class="service-filter-layout">
+      <div class="filter-pills" id="categoryFilters" role="group" aria-label="Service Categories">
+        <button class="filter-pill active" data-filter="all" aria-pressed="true">All Services</button>
+        <button class="filter-pill" data-filter="interior" aria-pressed="false">Interior</button>
+        <button class="filter-pill" data-filter="exterior" aria-pressed="false">Exterior</button>
+        <button class="filter-pill" data-filter="whole-house" aria-pressed="false">Whole House</button>
+        <button class="filter-pill" data-filter="cabinets" aria-pressed="false">Cabinets & Woodwork</button>
+        <button class="filter-pill" data-filter="preparation" aria-pressed="false">Preparation & Repairs</button>
+        <button class="filter-pill" data-filter="specialty" aria-pressed="false">Specialty Finishes</button>
+        <button class="filter-pill" data-filter="trim-doors" aria-pressed="false">Trim & Doors</button>
+      </div>
+      <div class="search-wrapper">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" id="serviceSearch" class="form-control search-input" placeholder="Search painting services..." aria-label="Search Services">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: PREMIUM SERVICE CARD GRID -->
+<section class="section-padding bg-alt">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <span class="text-gold fw-bold text-uppercase tracking-wide fs-7 mb-2 d-block">FIND YOUR SERVICE</span>
+        <h2 class="fw-bold text-navy display-6 mb-0">Explore Our Painting Services</h2>
+      </div>
+      <div class="text-slate small fw-bold" id="resultsCount" aria-live="polite">Showing 21 results</div>
+    </div>
+    
+    <div class="row g-4" id="servicesGrid">
+      <!-- Cards rendered via JS -->
+    </div>
+    
+    <div id="noResults" class="text-center py-5 d-none">
+      <i class="bi bi-search display-4 text-muted mb-3 d-block"></i>
+      <h4 class="text-navy fw-bold">No services found</h4>
+      <p class="text-slate">Try adjusting your search or filters to find what you're looking for.</p>
+      <button class="btn border border-navy text-navy rounded-pill px-4 mt-3" onclick="resetFilters()">Clear Filters</button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: FEATURED RESIDENTIAL SOLUTIONS -->
+<section class="section-padding bg-white border-top border-soft">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="text-gold fw-bold text-uppercase tracking-wide fs-7 mb-2 d-block">Core Expertise</span>
+      <h2 class="fw-bold text-navy display-6">Our Most Requested Solutions</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="position-relative rounded-4 overflow-hidden shadow-sm border border-soft group">
+          <img src="assets/images/services/interior-painting.webp" class="w-100" style="height: 350px; object-fit: cover;" alt="Interior Painting">
+          <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(0deg, rgba(20,46,74,0.95) 0%, rgba(20,46,74,0.8) 50%, transparent 100%);">
+            <span class="badge bg-gold text-navy fw-bold mb-2">MOST POPULAR</span>
+            <h4 class="text-white fw-bold">Complete Interior</h4>
+            <p class="text-white-50 small mb-3">Flawless walls, ceilings, and trim.</p>
+            <div class="d-flex gap-2">
+              <button onclick="openServiceModal('interior-painting')" class="btn btn-sm btn-outline-light rounded-pill">View Details</button>
+              <a href="estimate.html?service=Interior" class="btn btn-sm bg-gold text-navy border-0 rounded-pill fw-bold">Get Estimate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="position-relative rounded-4 overflow-hidden shadow-sm border border-soft group">
+          <img src="assets/images/services/exterior-painting.webp" class="w-100" style="height: 350px; object-fit: cover;" alt="Exterior Painting">
+          <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(0deg, rgba(20,46,74,0.95) 0%, rgba(20,46,74,0.8) 50%, transparent 100%);">
+            <span class="badge bg-gold text-navy fw-bold mb-2">CURB APPEAL</span>
+            <h4 class="text-white fw-bold">Exterior Refresh</h4>
+            <p class="text-white-50 small mb-3">Weather-resistant protective coatings.</p>
+            <div class="d-flex gap-2">
+              <button onclick="openServiceModal('exterior-painting')" class="btn btn-sm btn-outline-light rounded-pill">View Details</button>
+              <a href="estimate.html?service=Exterior" class="btn btn-sm bg-gold text-navy border-0 rounded-pill fw-bold">Get Estimate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="position-relative rounded-4 overflow-hidden shadow-sm border border-soft group">
+          <img src="assets/images/services/cabinet-painting.webp" class="w-100" style="height: 350px; object-fit: cover;" alt="Cabinet Painting">
+          <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(0deg, rgba(20,46,74,0.95) 0%, rgba(20,46,74,0.8) 50%, transparent 100%);">
+            <span class="badge bg-gold text-navy fw-bold mb-2">HIGH ROI</span>
+            <h4 class="text-white fw-bold">Cabinet Refinishing</h4>
+            <p class="text-white-50 small mb-3">Factory-like finishes for kitchens.</p>
+            <div class="d-flex gap-2">
+              <button onclick="openServiceModal('cabinet-painting')" class="btn btn-sm btn-outline-light rounded-pill">View Details</button>
+              <a href="estimate.html?service=Cabinets" class="btn btn-sm bg-gold text-navy border-0 rounded-pill fw-bold">Get Estimate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: OUR PAINTING PROCESS -->
+<section class="section-padding bg-white border-top border-soft">
+  <div class="container text-center">
+    <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">How We Work</span>
+    <h2 class="fw-bold text-navy display-6 mb-5 pb-4">Our Five-Step Painting Process</h2>
+    
+    <div class="row position-relative">
+      <div class="col-lg process-step-horizontal" data-aos="fade-up">
+        <div class="process-number-circle mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--fixed-navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--color-surface); box-shadow: 0 0 0 2px var(--color-accent); z-index: 2; position: relative;">01</div>
+        <h5 class="text-navy fw-bold fs-6 mb-2">Project Consultation</h5>
+        <p class="text-slate small px-md-2">Discuss your vision, budget, and scope.</p>
+      </div>
+      <div class="col-lg process-step-horizontal" data-aos="fade-up" data-aos-delay="100">
+        <div class="process-number-circle mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--fixed-navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--color-surface); box-shadow: 0 0 0 2px var(--color-accent); z-index: 2; position: relative;">02</div>
+        <h5 class="text-navy fw-bold fs-6 mb-2">Surface Assessment</h5>
+        <p class="text-slate small px-md-2">Evaluate surfaces and detail repairs.</p>
+      </div>
+      <div class="col-lg process-step-horizontal" data-aos="fade-up" data-aos-delay="200">
+        <div class="process-number-circle mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--fixed-navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--color-surface); box-shadow: 0 0 0 2px var(--color-accent); z-index: 2; position: relative;">03</div>
+        <h5 class="text-navy fw-bold fs-6 mb-2">Color & Materials</h5>
+        <p class="text-slate small px-md-2">Select perfect sheens and shades.</p>
+      </div>
+      <div class="col-lg process-step-horizontal" data-aos="fade-up" data-aos-delay="300">
+        <div class="process-number-circle mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--fixed-navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--color-surface); box-shadow: 0 0 0 2px var(--color-accent); z-index: 2; position: relative;">04</div>
+        <h5 class="text-navy fw-bold fs-6 mb-2">Professional Painting</h5>
+        <p class="text-slate small px-md-2">Execute prep and apply premium coatings.</p>
+      </div>
+      <div class="col-lg process-step-horizontal" data-aos="fade-up" data-aos-delay="400">
+        <div class="process-number-circle mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--fixed-navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--color-surface); box-shadow: 0 0 0 2px var(--color-accent); z-index: 2; position: relative;">05</div>
+        <h5 class="text-navy fw-bold fs-6 mb-2">Final Walkthrough</h5>
+        <p class="text-slate small px-md-2">Inspect the finish and ensure a clean space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: FEATURED PAINTING PROJECTS -->
+<section class="section-padding bg-alt border-top border-soft">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+      <div>
+        <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">Our Work</span>
+        <h2 class="fw-bold text-navy display-6 mb-0">Project Showcase</h2>
+      </div>
+      <a href="projects.html" class="btn text-navy fw-bold border-0 p-0 hover-gold transition-fast mt-3 mt-md-0 d-inline-flex align-items-center gap-1">View All Projects <i class="bi bi-arrow-right"></i></a>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up">
+        <a href="project-details.html" class="card h-100 border-0 bg-transparent text-decoration-none group">
+          <div class="rounded-4 overflow-hidden mb-3 shadow-sm border border-soft position-relative">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Interior Living Room" class="w-100 transition-fast group-hover:scale-105" style="height: 200px; object-fit: cover;">
+          </div>
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-8 mb-1 d-block">Interior</span>
+          <h5 class="text-navy fw-bold mb-1 fs-6">Modern Living Room</h5>
+          <p class="text-slate small mb-0">Complete wall and ceiling painting.</p>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <a href="project-details.html" class="card h-100 border-0 bg-transparent text-decoration-none group">
+          <div class="rounded-4 overflow-hidden mb-3 shadow-sm border border-soft position-relative">
+            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=600&q=80" alt="Exterior Home" class="w-100 transition-fast group-hover:scale-105" style="height: 200px; object-fit: cover;">
+          </div>
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-8 mb-1 d-block">Exterior</span>
+          <h5 class="text-navy fw-bold mb-1 fs-6">Classic Stucco</h5>
+          <p class="text-slate small mb-0">Weather-resistant coatings applied.</p>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <a href="project-details.html" class="card h-100 border-0 bg-transparent text-decoration-none group">
+          <div class="rounded-4 overflow-hidden mb-3 shadow-sm border border-soft position-relative">
+            <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=600&q=80" alt="Cabinet Refinishing" class="w-100 transition-fast group-hover:scale-105" style="height: 200px; object-fit: cover;">
+          </div>
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-8 mb-1 d-block">Cabinets</span>
+          <h5 class="text-navy fw-bold mb-1 fs-6">Kitchen Modernization</h5>
+          <p class="text-slate small mb-0">Refinished to a smooth navy enamel.</p>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <a href="project-details.html" class="card h-100 border-0 bg-transparent text-decoration-none group">
+          <div class="rounded-4 overflow-hidden mb-3 shadow-sm border border-soft position-relative">
+            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80" alt="Bedroom Refresh" class="w-100 transition-fast group-hover:scale-105" style="height: 200px; object-fit: cover;">
+          </div>
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-8 mb-1 d-block">Interior</span>
+          <h5 class="text-navy fw-bold mb-1 fs-6">Bedroom Wall Refresh</h5>
+          <p class="text-slate small mb-0">Calming colors with low-VOC paint.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: SERVICE FAQS -->
+<section class="section-padding bg-white border-top border-soft">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">Got Questions?</span>
+      <h2 class="fw-bold text-navy display-6">Service FAQs</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="accordion" id="servicesFaqAccordion">
+          
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold text-navy bg-surface shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                How do I choose the right painting service?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#servicesFaqAccordion">
+              <div class="accordion-body text-slate bg-surface">
+                Start by identifying your primary goal—whether it's refreshing a single room, updating your exterior, or completely transforming a kitchen. You can use our category filters above or contact us for a free color and scope consultation.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-surface shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Can I combine several services in one project?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#servicesFaqAccordion">
+              <div class="accordion-body text-slate bg-surface">
+                Absolutely. Many of our clients combine interior room painting with cabinet refinishing, or bundle exterior house painting with deck staining. Bundling services is often more efficient.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-surface shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Do you offer both interior and exterior painting?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#servicesFaqAccordion">
+              <div class="accordion-body text-slate bg-surface">
+                Yes, we are a full-service residential painting contractor equipped for both highly detailed interior finishes and large-scale, weather-resistant exterior projects.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-surface shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                What affects painting project costs?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#servicesFaqAccordion">
+              <div class="accordion-body text-slate bg-surface">
+                Costs are determined by the square footage, the condition of the surfaces (which dictates preparation time), the quality of the selected paint, and the complexity of the architectural details like trim and vaulted ceilings.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-surface shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                Can minor wall repairs be included?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#servicesFaqAccordion">
+              <div class="accordion-body text-slate bg-surface">
+                Yes, proper preparation is key. All our standard painting services include filling nail holes, minor crack patching, and light sanding. Major drywall repairs are also available as part of our Preparation & Repairs service.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-5">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 pe-lg-5">
+          <a class="navbar-brand d-flex align-items-center mb-4" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+          <p class="text-slate small mb-4">Premium residential painting services. Discover modern finishes, thoughtful color selection, and meticulous craftsmanship for your home.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><a href="index.html" class="text-slate text-decoration-none small hover-gold transition-fast">Home</a></li>
+            <li><a href="projects.html" class="text-slate text-decoration-none small hover-gold transition-fast">Projects</a></li>
+            <li><a href="about.html" class="text-slate text-decoration-none small hover-gold transition-fast">About Us</a></li>
+            <li><a href="services.html" class="text-slate text-decoration-none small hover-gold transition-fast">Services</a></li>
+            <li><a href="contact.html" class="text-slate text-decoration-none small hover-gold transition-fast">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Get in Touch</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-telephone text-gold mt-1"></i>
+              <a href="tel:5551234567" class="text-slate text-decoration-none small hover-gold transition-fast">(555) 123-4567</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-envelope text-gold mt-1"></i>
+              <a href="mailto:hello@chromora.demo" class="text-slate text-decoration-none small hover-gold transition-fast">hello@chromora.demo</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span class="text-slate small">123 Design Avenue,<br>Creative City, ST 12345</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 no-stack footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Facebook (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-facebook fs-6"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Instagram (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-instagram fs-6"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="Log in to LinkedIn (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-linkedin fs-6"></i></a>
+            <a href="https://www.youtube.com/signin" target="_blank" rel="noopener noreferrer" aria-label="Log in to YouTube (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-youtube fs-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top pt-4 mt-4 align-items-center">
+        <div class="col-12 text-center text-md-start">
+          <p class="text-slate small mb-0">&copy; 2026 Chromora Painting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/services-data.js"></script>
+  <script src="assets/js/services-catalog.js"></script>
+  <script src="assets/js/service-details.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <!-- Wall -->
+    <rect x="0" y="0" width="800" height="400" class="room-wall" fill="#F6F2E9" transition="fill 0.4s ease"/>
+    <!-- Wainscoting (Lower Wall) -->
+    <rect x="0" y="300" width="800" height="100" fill="#2c3439" opacity="0.8"/>
+    <rect x="0" y="290" width="800" height="10" fill="#fcfcfc"/>
+    <!-- Floor -->
+    <polygon points="0,400 800,400 800,600 0,600" fill="#d1c0b0"/>
+    <!-- Bookshelf -->
+    <rect x="50" y="50" width="200" height="350" fill="#f4f4ef" rx="4"/>
+    <rect x="60" y="120" width="180" height="10" fill="#dcdcdc"/>
+    <rect x="60" y="200" width="180" height="10" fill="#dcdcdc"/>
+    <rect x="60" y="280" width="180" height="10" fill="#dcdcdc"/>
+    <!-- Books -->
+    <rect x="70" y="60" width="20" height="60" fill="#c97859"/>
+    <rect x="100" y="70" width="15" height="50" fill="#829bae"/>
+    <rect x="120" y="50" width="30" height="70" fill="#515c63"/>
+    <rect x="80" y="140" width="40" height="60" fill="#a8b7a6"/>
+    <!-- Desk -->
+    <rect x="350" y="350" width="350" height="20" fill="#e6d6c1" rx="4"/>
+    <rect x="370" y="370" width="20" height="150" fill="#333"/>
+    <rect x="660" y="370" width="20" height="150" fill="#333"/>
+    <!-- Monitor -->
+    <rect x="450" y="220" width="150" height="100" fill="#111" rx="6"/>
+    <rect x="460" y="230" width="130" height="80" fill="#e8e9eb"/> <!-- screen -->
+    <rect x="510" y="320" width="30" height="30" fill="#555"/>
+    <!-- Chair -->
+    <rect x="480" y="300" width="80" height="120" fill="#b5a18d" rx="10"/>
+    <rect x="490" y="420" width="60" height="20" fill="#555"/>
+    <rect x="515" y="440" width="10" height="60" fill="#333"/>
+</svg>

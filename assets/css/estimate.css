@@ -1,0 +1,197 @@
+
+/* Estimate Form Specific Styles */
+.estimate-hero {
+    background-color: var(--c-ivory);
+}
+[data-bs-theme="dark"] .estimate-hero {
+    background-color: #0f172a;
+}
+.hero-image-wrapper img {
+    height: 400px;
+    object-fit: cover;
+}
+@media (min-width: 992px) {
+    .hero-image-wrapper img {
+        height: 480px;
+    }
+}
+.icon-circle {
+    background-color: var(--c-beige);
+    color: var(--c-accent);
+}
+[data-bs-theme="dark"] .icon-circle {
+    background-color: rgba(184, 149, 98, 0.1);
+}
+
+/* Progress Bar */
+.progress-indicator .step-item {
+    width: 60px;
+}
+.step-circle {
+    transition: all 0.3s ease;
+}
+.step-item.active .step-circle {
+    background-color: var(--c-primary) !important;
+    color: #fff !important;
+    border-color: var(--c-primary) !important;
+}
+.step-item.completed .step-circle {
+    background-color: var(--c-accent) !important;
+    color: #fff !important;
+    border-color: var(--c-accent) !important;
+}
+[data-bs-theme="dark"] .step-item.active .step-circle {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+}
+
+/* Form Steps */
+.form-step {
+    display: none;
+    animation: fadeIn 0.4s ease forwards;
+}
+.form-step.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Service Cards */
+.service-card-label {
+    display: block;
+    cursor: pointer;
+    height: 100%;
+}
+.service-card {
+    border: 2px solid var(--c-border);
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    height: 100%;
+    transition: all 0.2s ease;
+    background-color: #fff;
+    text-align: center;
+}
+[data-bs-theme="dark"] .service-card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+.service-card:hover {
+    border-color: var(--c-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.service-card-input:checked + .service-card-label .service-card {
+    border-color: var(--c-primary);
+    background-color: rgba(25, 50, 77, 0.03);
+    box-shadow: 0 0 0 1px var(--c-primary);
+}
+[data-bs-theme="dark"] .service-card-input:checked + .service-card-label .service-card {
+    border-color: var(--c-accent);
+    background-color: rgba(184, 149, 98, 0.1);
+    box-shadow: 0 0 0 1px var(--c-accent);
+}
+.service-icon {
+    font-size: 2rem;
+    color: var(--c-accent);
+    margin-bottom: 1rem;
+}
+
+/* Form Inputs */
+.form-control:focus, .form-select:focus {
+    border-color: var(--c-accent);
+    box-shadow: 0 0 0 0.25rem rgba(184, 149, 98, 0.25);
+}
+[data-bs-theme="dark"] .form-control, [data-bs-theme="dark"] .form-select {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+[data-bs-theme="dark"] .form-control:focus, [data-bs-theme="dark"] .form-select:focus {
+    border-color: var(--c-accent);
+    background-color: #0f172a;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    border-color: #dc3545;
+}
+#multi-step-form .form-control.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+    border: 2px dashed var(--c-border);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+[data-bs-theme="dark"] .file-upload-wrapper {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+.file-upload-wrapper:hover {
+    border-color: var(--c-accent);
+    background-color: #fff;
+}
+[data-bs-theme="dark"] .file-upload-wrapper:hover {
+    background-color: #0f172a;
+}
+
+/* Summary Review */
+.review-block {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+[data-bs-theme="dark"] .review-block {
+    background-color: #1e293b;
+}
+.edit-btn {
+    font-size: 0.85rem;
+    color: var(--c-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.edit-btn:hover {
+    text-decoration: underline;
+}
+
+/* Timeline */
+.process-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--c-accent);
+    opacity: 0.3;
+}
+.process-step {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.process-step::before {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--c-accent);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px rgba(184,149,98,0.2);
+}
+[data-bs-theme="dark"] .process-step::before {
+    border-color: #0f172a;
+}

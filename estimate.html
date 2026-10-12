@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+  <link rel="icon" href="assets/images/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+<title>Chromora - Premium Residential Painting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Page Scoped CSS for Home 01 Redesign -->
+  <link rel="stylesheet" href="assets/css/home-01-redesign.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('chromora-theme');
+      } catch (error) {}
+      
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : (systemDark ? 'dark' : 'light');
+      
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/estimate.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="redesign-header fixed-top bg-white">
+    <div class="container-fluid px-4 px-lg-5">
+      <nav class="navbar navbar-expand-xxl py-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-heading"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-xxl-0 fw-semibold">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="dropdown-item" href="index.html">Home &ndash; Painting Experts</a></li>
+                <li><a class="dropdown-item" href="home-02.html">Home &ndash; Design Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="color-consultation.html">Colors</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-actions d-flex align-items-center">
+            <button id="theme-toggle-home" type="button" class="btn btn-link navbar-icon-button text-heading p-0 fs-5" aria-label="Toggle Theme">
+              <i class="bi bi-moon"></i>
+            </button>
+            <button id="rtl-toggle" type="button" class="btn btn-link navbar-icon-button text-heading p-0 fs-6 fw-semibold" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Switch to right-to-left layout">
+              RTL
+            </button>
+            <a href="estimate.html" class="btn btn-primary navbar-estimate rounded-pill px-4 py-2 d-flex align-items-center gap-2 fw-semibold">
+              Get Free Estimate <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+
+<main>
+    <!-- SECTION 1 - HERO -->
+    <section class="estimate-hero pt-5 pb-5 mt-5">
+        <div class="container pt-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="d-inline-block text-gold fw-bold tracking-widest text-uppercase fs-7 mb-3" style="letter-spacing: 2px;">Let's Plan Your Project</span>
+                    <h1 class="display-4 fw-bold text-heading mb-4">Let's Bring Your Painting Vision to Life.</h1>
+                    <p class="lead text-body mb-5">Tell us a little about your home and the painting work you have in mind. We'll help you take the next step toward a beautifully refreshed space.</p>
+                    <div class="hero-actions">
+                        <a href="#estimate-form-section" class="btn hero-button-primary" >Start Your Estimate &darr;</a>
+                        <a href="services.html" class="btn hero-button-secondary" >Explore Our Services &rarr;</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-wrapper rounded-4 overflow-hidden shadow-sm position-relative">
+                        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Beautifully painted interior living room" class="img-fluid w-100 object-fit-cover" style="height: 480px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 - MULTI-STEP FORM -->
+    <section id="estimate-form-section" class="estimate-form-section py-5" style="background-color: var(--c-bg-alt);">
+        <div class="container py-4">
+            <!-- Progress Indicator -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <!-- Desktop Progress -->
+                    <div class="progress-indicator d-none d-md-flex justify-content-between position-relative w-100 mx-auto" style="max-width: 800px;">
+                        <div class="progress-line position-absolute top-50 start-0 w-100 translate-middle-y z-0" style="height: 2px; background-color: #E8E9EB;"></div>
+                        <div class="progress-line-active position-absolute top-50 start-0 translate-middle-y z-0" style="height: 2px; background-color: var(--c-primary); width: 0%; transition: width 0.3s ease;"></div>
+                        
+                        <div class="step-item text-center z-1 position-relative active" data-step="1">
+                            <div class="step-circle rounded-circle bg-white border border-2 border-primary text-heading fw-bold d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 36px; height: 36px;">1</div>
+                            <span class="step-label small fw-semibold text-heading">Services</span>
+                        </div>
+                        <div class="step-item text-center z-1 position-relative" data-step="2">
+                            <div class="step-circle rounded-circle bg-white border border-2 border-gray text-muted fw-bold d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 36px; height: 36px;">2</div>
+                            <span class="step-label small text-muted">Property</span>
+                        </div>
+                        <div class="step-item text-center z-1 position-relative" data-step="3">
+                            <div class="step-circle rounded-circle bg-white border border-2 border-gray text-muted fw-bold d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 36px; height: 36px;">3</div>
+                            <span class="step-label small text-muted">Measurements</span>
+                        </div>
+                        <div class="step-item text-center z-1 position-relative" data-step="4">
+                            <div class="step-circle rounded-circle bg-white border border-2 border-gray text-muted fw-bold d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 36px; height: 36px;">4</div>
+                            <span class="step-label small text-muted">Contact</span>
+                        </div>
+                        <div class="step-item text-center z-1 position-relative" data-step="5">
+                            <div class="step-circle rounded-circle bg-white border border-2 border-gray text-muted fw-bold d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 36px; height: 36px;">5</div>
+                            <span class="step-label small text-muted">Estimate</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Progress -->
+                    <div class="mobile-progress d-md-none text-center">
+                        <p class="mb-2 fw-semibold text-heading" id="mobile-step-text">Step 1 of 5 &mdash; Services</p>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar" role="progressbar" style="width: 20%; background-color: var(--c-primary);" id="mobile-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Left Info Panel -->
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="info-panel sticky-top" style="top: 100px;">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional painter working on an interior wall" class="img-fluid rounded-4 mb-4 shadow-sm object-fit-cover" style="height: 200px; width: 100%;">
+                        <h3 class="fs-4 fw-bold text-heading mb-3">Your Home. Your Vision.</h3>
+                        <p class="text-body small mb-4">Share your project details and explore a preliminary painting estimate based on your selected services, measurements, and preparation requirements.</p>
+                        
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex align-items-start gap-2 mb-3">
+                                <i class="bi bi-check-circle-fill text-gold mt-1"></i>
+                                <span class="text-body small">No obligation to submit an inquiry</span>
+                            </li>
+                            <li class="d-flex align-items-start gap-2 mb-3">
+                                <i class="bi bi-check-circle-fill text-gold mt-1"></i>
+                                <span class="text-body small">Transparent estimation assumptions</span>
+                            </li>
+                            <li class="d-flex align-items-start gap-2 mb-3">
+                                <i class="bi bi-check-circle-fill text-gold mt-1"></i>
+                                <span class="text-body small">Review your project details before sending</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="p-4 bg-white rounded-4 border shadow-sm" style="border-color: #E8E9EB;">
+                            <p class="fw-semibold text-heading mb-1">Need help?</p>
+                            <p class="text-body small mb-2">Call us directly to speak with an estimator.</p>
+                            <a href="contact.html" class="text-gold text-decoration-none fw-bold"><i class="bi bi-telephone-fill me-2"></i>1-800-555-0199</a>
+                            <p class="text-muted small mt-2 mb-0">Mon - Fri: 8am - 6pm</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Form Panel -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4 form-card overflow-hidden">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="multi-step-form" novalidate>
+                                
+                                <!-- STEP 1: SERVICE -->
+                                <div class="form-step active" data-step="1">
+                                    <h3 class="fw-bold text-heading mb-2" tabindex="-1" id="step1-heading">What Would You Like to Paint?</h3>
+                                    <p class="text-body mb-4">Select all the services that apply to your project.</p>
+                                    
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-interior" value="Interior Painting" autocomplete="off">
+                                            <label class="service-card-label" for="srv-interior">
+                                                <div class="service-card">
+                                                    <i class="bi bi-house-door service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Interior Painting</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-exterior" value="Exterior Painting" autocomplete="off">
+                                            <label class="service-card-label" for="srv-exterior">
+                                                <div class="service-card">
+                                                    <i class="bi bi-house service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Exterior Painting</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-whole" value="Whole House Painting" autocomplete="off">
+                                            <label class="service-card-label" for="srv-whole">
+                                                <div class="service-card">
+                                                    <i class="bi bi-houses service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Whole House</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-cabinets" value="Cabinets" autocomplete="off">
+                                            <label class="service-card-label" for="srv-cabinets">
+                                                <div class="service-card">
+                                                    <i class="bi bi-grid-1x2 service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Cabinets</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-walls" value="Walls & Ceilings" autocomplete="off">
+                                            <label class="service-card-label" for="srv-walls">
+                                                <div class="service-card">
+                                                    <i class="bi bi-bounding-box service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Walls & Ceilings</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-trim" value="Trim & Doors" autocomplete="off">
+                                            <label class="service-card-label" for="srv-trim">
+                                                <div class="service-card">
+                                                    <i class="bi bi-door-closed service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Trim & Doors</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-deck" value="Deck & Fence" autocomplete="off">
+                                            <label class="service-card-label" for="srv-deck">
+                                                <div class="service-card">
+                                                    <i class="bi bi-layout-three-columns service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Deck & Fence</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-drywall" value="Drywall Repair" autocomplete="off">
+                                            <label class="service-card-label" for="srv-drywall">
+                                                <div class="service-card">
+                                                    <i class="bi bi-hammer service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Drywall Repair</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="checkbox" class="btn-check service-card-input" id="srv-other" value="Other" autocomplete="off">
+                                            <label class="service-card-label" for="srv-other">
+                                                <div class="service-card">
+                                                    <i class="bi bi-three-dots service-icon"></i>
+                                                    <h6 class="fw-bold text-heading mb-1">Other</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div id="service-error" class="text-danger small fw-bold mb-3 d-none">Please select at least one service to continue.</div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-primary px-4 py-2 rounded-pill btn-next" >Continue &rarr;</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- STEP 2: PROPERTY -->
+                                <div class="form-step" data-step="2">
+                                    <h3 class="fw-bold text-heading mb-2" tabindex="-1" id="step2-heading">Tell Us About Your Property.</h3>
+                                    <p class="text-body mb-4">Help us understand the space we'll be working on.</p>
+                                    
+                                    <div class="row g-4 mb-4">
+                                        <div class="col-md-6">
+                                            <label for="prop-type" class="form-label fw-semibold text-heading">Property Type *</label>
+                                            <select class="form-select py-2" id="prop-type" required>
+                                                <option value="" selected disabled>Choose property type...</option>
+                                                <option value="Independent House">Independent House</option>
+                                                <option value="Apartment">Apartment</option>
+                                                <option value="Villa">Villa</option>
+                                                <option value="Townhouse">Townhouse</option>
+                                                <option value="Duplex">Duplex</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select a property type.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="prop-zip" class="form-label fw-semibold text-heading">ZIP / Postal Code *</label>
+                                            <input type="text" class="form-control py-2" id="prop-zip" placeholder="e.g. 10001" required>
+                                            <div class="invalid-feedback">Please enter a valid ZIP or postal code.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="prop-size" class="form-label fw-semibold text-heading">Approx. Total Property Area (sq ft)</label>
+                                            <input type="number" class="form-control py-2" id="prop-size" placeholder="e.g. 1500" min="1">
+                                            <div class="form-text small text-muted">Total property area is not necessarily the paintable surface area.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="prop-condition" class="form-label fw-semibold text-heading">General Property Condition</label>
+                                            <select class="form-select py-2" id="prop-condition" required>
+                                                <option value="" selected disabled>Select condition...</option>
+                                                <option value="New Construction">New Construction</option>
+                                                <option value="Good Condition">Good Condition</option>
+                                                <option value="Minor Repairs Needed">Minor Repairs Needed</option>
+                                                <option value="Extensive Preparation Needed">Extensive Preparation Needed</option>
+                                                <option value="Not Sure">Not Sure</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select a condition.</div>
+                                        </div>
+                                        
+                                        <!-- Conditional: Interior -->
+                                        <div id="cond-interior" class="col-12 mt-4" style="display: none;">
+                                            <div class="p-3 bg-light rounded-3 border">
+                                                <h6 class="fw-bold text-heading mb-3"><i class="bi bi-house-door me-2 text-gold"></i>Interior Summary</h6>
+                                                <div class="row g-3">
+                                                    <div class="col-md-6">
+                                                        <label class="form-label small fw-semibold text-heading">Number of Rooms to Paint</label>
+                                                        <input type="number" class="form-control py-2" id="int-rooms-count" min="1" value="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Conditional: Exterior -->
+                                        <div id="cond-exterior" class="col-12 mt-4" style="display: none;">
+                                            <div class="p-3 bg-light rounded-3 border">
+                                                <h6 class="fw-bold text-heading mb-3"><i class="bi bi-house me-2 text-gold"></i>Exterior Summary</h6>
+                                                <div class="row g-3">
+                                                    <div class="col-md-6">
+                                                        <label class="form-label small fw-semibold text-heading">Number of Floors</label>
+                                                        <input type="number" class="form-control py-2" id="ext-floors-count" min="1" value="1">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="form-label small fw-semibold text-heading">Primary Exterior Surface</label>
+                                                        <select class="form-select py-2" id="ext-surface-type">
+                                                            <option value="" selected>Select...</option>
+                                                            <option value="Stucco">Stucco</option>
+                                                            <option value="Brick">Brick</option>
+                                                            <option value="Wood Siding">Wood Siding</option>
+                                                            <option value="Fiber Cement">Fiber Cement</option>
+                                                            <option value="Previously Painted Masonry">Previously Painted Masonry</option>
+                                                            <option value="Other">Other</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-pill btn-prev">&larr; Previous</button>
+                                        <button type="button" class="btn btn-primary px-4 py-2 rounded-pill btn-next" >Continue &rarr;</button>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 3: MEASUREMENTS -->
+                                <div class="form-step" data-step="3">
+                                    <h3 class="fw-bold text-heading mb-2" tabindex="-1" id="step3-heading">Let's Understand Your Painting Project.</h3>
+                                    <p class="text-body mb-4">Provide measurements to calculate a preliminary estimate.</p>
+                                    
+                                    <div id="measurements-container">
+                                        <!-- Interior Measurements -->
+                                        <div id="measure-interior" class="mb-5 d-none border rounded-3 p-4">
+                                            <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">Interior Painting</h5>
+                                            <div id="rooms-container">
+                                                <!-- Rooms generated by JS -->
+                                            </div>
+                                            <button type="button" id="add-room-btn" class="btn btn-sm btn-outline mt-2">+ Add Another Room</button>
+                                            
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Number of Paint Coats</label>
+                                                    <select class="form-select py-2" id="int-coats">
+                                                        <option value="1">1 Coat</option>
+                                                        <option value="2" selected>2 Coats</option>
+                                                        <option value="3">3 Coats</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Exterior Measurements -->
+                                        <div id="measure-exterior" class="mb-5 d-none border rounded-3 p-4">
+                                            <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">Exterior Painting</h5>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Total Exterior Wall Area (sq ft)</label>
+                                                    <input type="number" class="form-control py-2" id="ext-total-area" placeholder="e.g. 2500" min="0">
+                                                    <div class="form-text small">Estimate the total paintable surface area of the exterior walls.</div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Number of Paint Coats</label>
+                                                    <select class="form-select py-2" id="ext-coats">
+                                                        <option value="1">1 Coat</option>
+                                                        <option value="2" selected>2 Coats</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cabinet Measurements -->
+                                        <div id="measure-cabinets" class="mb-5 d-none border rounded-3 p-4">
+                                            <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">Cabinet Painting</h5>
+                                            <div class="row g-3">
+                                                <div class="col-md-4">
+                                                    <label class="form-label small fw-semibold text-heading">Number of Doors</label>
+                                                    <input type="number" class="form-control py-2" id="cab-doors" placeholder="e.g. 15" min="0">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="form-label small fw-semibold text-heading">Number of Drawers</label>
+                                                    <input type="number" class="form-control py-2" id="cab-drawers" placeholder="e.g. 8" min="0">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="form-label small fw-semibold text-heading">Exposed Box Area (sq ft)</label>
+                                                    <input type="number" class="form-control py-2" id="cab-box-area" placeholder="e.g. 30" min="0">
+                                                </div>
+                                                <div class="col-md-6 mt-3">
+                                                    <label class="form-label small fw-semibold text-heading">Preferred Finish</label>
+                                                    <select class="form-select py-2" id="cab-finish">
+                                                        <option value="Solid Paint" selected>Solid Paint</option>
+                                                        <option value="Stain">Stain</option>
+                                                        <option value="Clear Coat">Clear Coat</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Deck & Fence Measurements -->
+                                        <div id="measure-deck" class="mb-5 d-none border rounded-3 p-4">
+                                            <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">Deck & Fence Painting/Staining</h5>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Type</label>
+                                                    <select class="form-select py-2" id="deck-type">
+                                                        <option value="Deck">Deck</option>
+                                                        <option value="Fence">Fence</option>
+                                                        <option value="Both">Both</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Total Area (sq ft)</label>
+                                                    <input type="number" class="form-control py-2" id="deck-area" placeholder="e.g. 400" min="0">
+                                                    <div class="form-text small">For fences, include total square footage (Length &times; Height &times; Sides).</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Drywall Repair -->
+                                        <div id="measure-drywall" class="mb-5 d-none border rounded-3 p-4">
+                                            <h5 class="fw-bold text-heading mb-3 border-bottom pb-2">Drywall Repair</h5>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Number of Repair Areas</label>
+                                                    <input type="number" class="form-control py-2" id="drywall-areas" placeholder="e.g. 3" min="0">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label small fw-semibold text-heading">Repair Category</label>
+                                                    <select class="form-select py-2" id="drywall-category">
+                                                        <option value="Small Patches">Small Patches (Nail holes, small dents)</option>
+                                                        <option value="Medium Patches">Medium Patches (Doorknob holes, cracks)</option>
+                                                        <option value="Large Patches">Large Patches (Water damage, large holes)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Other Services fallback -->
+                                        <div id="measure-other" class="mb-5 d-none">
+                                            <p class="text-muted small">You selected services that require custom quoting. Your estimate will focus on standard items, and our team will provide a final custom quote for specialized work.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-pill btn-prev">&larr; Previous</button>
+                                        <button type="button" class="btn btn-primary px-4 py-2 rounded-pill btn-next"  id="btn-calc-estimate">Calculate Estimate &rarr;</button>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 4: CONTACT -->
+                                <div class="form-step" data-step="4">
+                                    <h3 class="fw-bold text-heading mb-2" tabindex="-1" id="step4-heading">How Can We Contact You?</h3>
+                                    <p class="text-body mb-4">Provide details if you'd like to submit this inquiry. You can skip this step to just view your estimate.</p>
+                                    
+                                    <div class="row g-4 mb-4">
+                                        <div class="col-md-6">
+                                            <label for="contact-name" class="form-label fw-semibold text-heading">Full Name</label>
+                                            <input type="text" class="form-control py-2" id="contact-name" placeholder="John Doe" autocomplete="name" minlength="3" aria-describedby="contact-name-error">
+                                            <div class="invalid-feedback" id="contact-name-error" aria-live="polite">Enter a name with at least 3 characters.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-email" class="form-label fw-semibold text-heading">Email Address</label>
+                                            <input type="email" class="form-control py-2" id="contact-email" placeholder="john@example.com" autocomplete="email" aria-describedby="contact-email-error">
+                                            <div class="invalid-feedback" id="contact-email-error" aria-live="polite">Enter a valid email address, such as john@example.com.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-phone" class="form-label fw-semibold text-heading">Phone Number</label>
+                                            <input type="tel" class="form-control py-2" id="contact-phone" placeholder="5550000000" autocomplete="tel" inputmode="numeric" pattern="[0-9]+" aria-describedby="contact-phone-error">
+                                            <div class="invalid-feedback" id="contact-phone-error" aria-live="polite">Enter a phone number using digits only.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="proj-timeline" class="form-label fw-semibold text-heading">Preferred Start Date</label>
+                                            <select class="form-select py-2" id="proj-timeline">
+                                                <option value="" selected>Flexible</option>
+                                                <option value="As Soon As Possible">As Soon As Possible</option>
+                                                <option value="Within 2 Weeks">Within 2 Weeks</option>
+                                                <option value="Within 1 Month">Within 1 Month</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="proj-desc" class="form-label fw-semibold text-heading">Project Notes</label>
+                                            <textarea class="form-control py-2" id="proj-desc" rows="3" placeholder="Tell us more details..."></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-pill btn-prev">&larr; Previous</button>
+                                        <button type="button" class="btn btn-primary px-4 py-2 rounded-pill btn-next" >View Estimate &rarr;</button>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 5: REVIEW & ESTIMATE -->
+                                <div class="form-step" data-step="5">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h3 class="fw-bold text-heading mb-0" tabindex="-1" id="step5-heading">Your Preliminary Painting Estimate</h3>
+                                        <button type="button" class="btn btn-sm btn-outline d-none d-md-inline-block" onclick="window.print()"><i class="bi bi-printer me-2"></i>Print</button>
+                                    </div>
+                                    
+                                    <div class="card border border-2 border-gold rounded-4 mb-4 bg-white" style="border-color: var(--c-accent) !important;">
+                                        <div class="card-body p-4 p-md-5">
+                                            
+                                            <!-- Project Summary -->
+                                            <div class="mb-4 pb-4 border-bottom">
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <h5 class="fw-bold text-heading mb-0">Project Summary</h5>
+                                                    <a href="javascript:void(0)" class="text-gold text-decoration-none small fw-bold" onclick="window.editStep(1)">Edit Details</a>
+                                                </div>
+                                                <div class="row text-body small">
+                                                    <div class="col-sm-6 mb-2"><strong>Services:</strong> <span id="sum-services">Interior Painting</span></div>
+                                                    <div class="col-sm-6 mb-2"><strong>Property:</strong> <span id="sum-property">Independent House</span></div>
+                                                    <div class="col-sm-6 mb-2"><strong>Condition:</strong> <span id="sum-condition">Good Condition</span></div>
+                                                    <div class="col-sm-6 mb-2"><strong>Location ZIP:</strong> <span id="sum-zip">N/A</span></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Measurement Summary -->
+                                            <div class="mb-4 pb-4 border-bottom" id="sum-measurements-container">
+                                                <h6 class="fw-bold text-heading mb-3">Measurements & Scope</h6>
+                                                <ul class="list-unstyled text-body small mb-0" id="sum-measurements-list">
+                                                    <!-- Dynamic list -->
+                                                </ul>
+                                            </div>
+                                            
+                                            <!-- Itemized Costs -->
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-heading mb-3">Itemized Preliminary Estimate</h5>
+                                                <div class="table-responsive">
+                                                    <table class="table table-borderless text-body small mb-0">
+                                                        <tbody id="est-line-items">
+                                                            <!-- Dynamic line items -->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <!-- Totals -->
+                                            <div class="bg-light rounded-3 p-4 mt-4">
+                                                <div class="d-flex justify-content-between text-heading mb-2 fw-semibold">
+                                                    <span>Subtotal</span>
+                                                    <span id="est-subtotal">$0.00</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between text-heading mb-3 pb-3 border-bottom border-secondary border-opacity-25 small" id="est-tax-row" style="display:none !important;">
+                                                    <span>Estimated Tax (8%)</span>
+                                                    <span id="est-tax">$0.00</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center text-heading mt-2">
+                                                    <span class="fs-5 fw-bold">Estimated Total Range</span>
+                                                    <span class="fs-4 fw-bold" style="color: var(--c-primary);" id="est-total-range">$0 - $0</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4 text-center">
+                                                <p class="text-muted small fst-italic mb-0">Preliminary estimate only based on your measurements. Final pricing is subject to a formal on-site project assessment and may vary due to accessibility, specialized materials, or unforeseen repairs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-outline-secondary px-4 py-2 rounded-pill btn-prev">&larr; Edit Details</button>
+                                        <button type="button" class="btn btn-primary px-4 py-2 rounded-pill fw-bold shadow-sm" id="btn-submit-inquiry" >Send Inquiry Request &rarr;</button>
+                                    </div>
+                                    <div id="submit-error" class="text-danger small fw-bold mt-2 text-end d-none">Please provide your Name, Email, and Phone in Step 4 to submit.</div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-5">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 pe-lg-5">
+          <a class="navbar-brand d-flex align-items-center mb-4" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+          <p class="text-body small mb-4">Premium residential painting services. Discover modern finishes, thoughtful color selection, and meticulous craftsmanship for your home.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold text-heading fs-6 mb-4">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><a href="index.html" class="text-body text-decoration-none small hover-gold transition-fast">Home</a></li>
+            <li><a href="projects.html" class="text-body text-decoration-none small hover-gold transition-fast">Projects</a></li>
+            <li><a href="about.html" class="text-body text-decoration-none small hover-gold transition-fast">About Us</a></li>
+            <li><a href="services.html" class="text-body text-decoration-none small hover-gold transition-fast">Services</a></li>
+            <li><a href="contact.html" class="text-body text-decoration-none small hover-gold transition-fast">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-heading fs-6 mb-4">Get in Touch</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-telephone text-gold mt-1"></i>
+              <a href="tel:5551234567" class="text-body text-decoration-none small hover-gold transition-fast">(555) 123-4567</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-envelope text-gold mt-1"></i>
+              <a href="mailto:hello@chromora.demo" class="text-body text-decoration-none small hover-gold transition-fast">hello@chromora.demo</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span class="text-body small">123 Design Avenue,<br>Creative City, ST 12345</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-heading fs-6 mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 no-stack footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Facebook (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-facebook fs-6"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Instagram (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-instagram fs-6"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="Log in to LinkedIn (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-linkedin fs-6"></i></a>
+            <a href="https://www.youtube.com/signin" target="_blank" rel="noopener noreferrer" aria-label="Log in to YouTube (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-youtube fs-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top pt-4 mt-4 align-items-center">
+        <div class="col-12 text-center text-md-start">
+          <p class="text-body small mb-0">&copy; 2026 Chromora Painting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/estimate-pricing-config.js"></script>
+  <script src="assets/js/services-data.js"></script>
+    <script src="assets/js/estimate-calculator.js"></script>
+    <script src="assets/js/estimate.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* Home 02 gallery. Theme values are scoped to this section only. */
+#roomGalleryColors > div { flex-shrink: 0; }
+@media (max-width: 575.98px) {
+  .room-inspiration-card { display: flex; flex-direction: column; }
+  .room-inspiration-card .room-inspiration-caption {
+    position: relative !important;
+    margin-top: auto;
+    padding: 32px 20px 24px !important;
+  }
+  .room-inspiration-actions {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 20px !important;
+  }
+  .room-inspiration-actions > div > span { white-space: nowrap; }
+  #roomGalleryLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px !important;
+    font-size: .9375rem;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+}
+
+.home2-craft-gallery {
+  --craft-background: #FAF8F5;
+  --craft-heading: #19324D;
+  --craft-description: #526477;
+  --craft-eyebrow: #B89562;
+  --craft-surface: #FFFFFF;
+  --craft-border: #E8E9EB;
+  --craft-focus: #19324D;
+  background: var(--craft-background);
+  color: var(--craft-description);
+  padding-block: clamp(56px, 6vw, 96px);
+}
+
+[data-theme="dark"] .home2-craft-gallery {
+  --craft-background: #142E4A;
+  --craft-heading: #F5F7FA;
+  --craft-description: #CAD4DE;
+  --craft-eyebrow: #D4B17B;
+  --craft-surface: #1D2D3B;
+  --craft-border: #46596B;
+  --craft-focus: #E3C596;
+}
+
+.home2-craft-header { margin-bottom: 32px; }
+.home2-craft-header h2,
+.home2-craft-footer h5 { color: var(--craft-heading); }
+.home2-craft-header p { color: var(--craft-description); }
+
+/* The navy backing keeps the requested gold eyebrow legible in light mode. */
+.home2-craft-eyebrow {
+  display: inline-block;
+  color: var(--craft-eyebrow);
+  background: #142E4A;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.home2-craft-intro {
+  border-inline-start: 2px solid var(--craft-eyebrow);
+  padding-inline-start: 24px;
+}
+
+.home2-craft-portfolio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 10px 22px;
+  border: 1px solid var(--craft-heading);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--craft-heading);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.home2-craft-portfolio:hover,
+.home2-craft-portfolio:focus-visible {
+  background: #E3C596;
+  border-color: #E3C596;
+  color: #142E4A;
+}
+
+.home2-craft-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  grid-auto-rows: 420px;
+}
+
+.home2-craft-item {
+  position: relative;
+  display: block;
+  min-width: 0;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--craft-border);
+  background: var(--craft-surface);
+  box-shadow: 0 8px 24px rgba(8, 20, 33, .1);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.home2-craft-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  transition: transform .35s ease;
+}
+
+.home2-craft-overlay {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 64px 24px 24px;
+  /* Only the caption area is shaded. At text level, even a white photo
+     stays dark enough for champagne labels and white captions. */
+  background: linear-gradient(to bottom, rgba(8,20,33,0), rgba(8,20,33,.8) 56px, rgba(8,20,33,.92));
+  pointer-events: none;
+}
+
+.home2-craft-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent 56px, rgba(8,20,33,.15));
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.home2-craft-content h3 {
+  color: #FFFFFF;
+  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.home2-craft-cat {
+  display: block;
+  color: #E3C596;
+  font-size: .75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 8px;
+}
+
+.home2-craft-desc {
+  color: #F1F4F7;
+  font-size: .9375rem;
+  line-height: 1.5;
+  margin: 12px 0 0;
+}
+
+.home2-craft-icon {
+  position: absolute;
+  inset-block-start: 18px;
+  inset-inline-end: 18px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 50%;
+  background: rgba(8,20,33,.8);
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  transition: background-color .35s ease, color .35s ease;
+}
+
+.home2-craft-item:is(:hover, :focus-visible) img { transform: scale(1.03); }
+.home2-craft-item:is(:hover, :focus-visible) .home2-craft-overlay::before { opacity: 1; }
+.home2-craft-item:is(:hover, :focus-visible) .home2-craft-icon {
+  background: #E3C596;
+  color: #142E4A;
+  border-color: #E3C596;
+}
+
+.home2-craft-gallery a:focus-visible {
+  outline: 3px solid var(--craft-focus);
+  outline-offset: 4px;
+}
+
+.home2-craft-footer {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--craft-border);
+  gap: 24px;
+}
+
+.home2-craft-note {
+  color: var(--craft-description);
+  font-size: .8125rem;
+  margin: 8px 0 0;
+}
+
+@media (min-width: 768px) {
+  .home2-craft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: clamp(460px, 56vw, 580px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .home2-craft-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 380px);
+    gap: 24px;
+  }
+  .home2-craft-item--featured { grid-column: span 2; grid-row: span 2; }
+  .home2-craft-item--wide { grid-column: span 2; }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 1200px) {
+  .home2-craft-desc {
+    display: none;
+    animation: craft-description-reveal .35s ease;
+  }
+  .home2-craft-item:is(:hover, :focus-visible) .home2-craft-desc { display: block; }
+}
+
+@keyframes craft-description-reveal {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home2-craft-item img,
+  .home2-craft-overlay::before,
+  .home2-craft-icon,
+  .home2-craft-portfolio { transition: none; }
+  .home2-craft-item:is(:hover, :focus-visible) img { transform: none; }
+  .home2-craft-desc { animation: none; }
+}

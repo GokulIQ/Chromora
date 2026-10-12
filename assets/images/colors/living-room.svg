@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <defs>
+        <clipPath id="window-clip"><rect x="500" y="100" width="150" height="250" rx="4"/></clipPath>
+    </defs>
+    <!-- Wall (Colorable) -->
+    <rect x="0" y="0" width="800" height="450" class="room-wall" fill="#F6F2E9" transition="fill 0.4s ease"/>
+    <!-- Floor -->
+    <polygon points="0,450 800,450 800,600 0,600" fill="#d4c3b3"/>
+    <polygon points="0,450 800,450 600,420 200,420" fill="#c3b2a2" opacity="0.3"/> <!-- Floor shadow/perspective -->
+    <!-- Window -->
+    <rect x="490" y="90" width="170" height="270" fill="#fcfcfc" rx="8"/> <!-- frame -->
+    <rect x="500" y="100" width="150" height="250" fill="#aaccff" rx="4"/> <!-- glass -->
+    <rect x="570" y="100" width="10" height="250" fill="#fcfcfc"/> <!-- mullion -->
+    <rect x="500" y="220" width="150" height="10" fill="#fcfcfc"/> <!-- transom -->
+    <rect x="480" y="360" width="190" height="15" fill="#fcfcfc" rx="2"/> <!-- sill -->
+    <!-- Couch -->
+    <rect x="150" y="320" width="280" height="150" fill="#2a3b4c" rx="10"/> <!-- back -->
+    <rect x="130" y="380" width="40" height="90" fill="#1f2d3d" rx="8"/> <!-- left arm -->
+    <rect x="410" y="380" width="40" height="90" fill="#1f2d3d" rx="8"/> <!-- right arm -->
+    <rect x="150" y="420" width="280" height="50" fill="#35495e" rx="8"/> <!-- seat -->
+    <rect x="160" y="470" width="15" height="30" fill="#555"/> <!-- leg -->
+    <rect x="405" y="470" width="15" height="30" fill="#555"/> <!-- leg -->
+    <!-- Pillows -->
+    <rect x="180" y="380" width="50" height="40" fill="#c97859" rx="8"/>
+    <rect x="350" y="380" width="50" height="40" fill="#b8d1d8" rx="8"/>
+    <!-- Coffee Table -->
+    <ellipse cx="290" cy="520" rx="90" ry="25" fill="#e8d8c8"/>
+    <rect x="250" y="520" width="10" height="40" fill="#887868"/>
+    <rect x="320" y="520" width="10" height="40" fill="#887868"/>
+    <!-- Plant -->
+    <path d="M 60 450 Q 80 300 120 450" fill="#3a5a40"/>
+    <path d="M 90 450 Q 50 350 40 450" fill="#52796f"/>
+    <rect x="65" y="450" width="40" height="50" fill="#e07a5f" rx="4"/>
+    <!-- Art -->
+    <rect x="180" y="100" width="200" height="150" fill="#fff" stroke="#333" stroke-width="4"/>
+    <circle cx="280" cy="175" r="40" fill="#c5a36a"/>
+</svg>

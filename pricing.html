@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+  <link rel="icon" href="assets/images/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+<title>Chromora - Premium Residential Painting</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Page Scoped CSS for Home 01 Redesign -->
+  <link rel="stylesheet" href="assets/css/home-01-redesign.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('chromora-theme');
+      } catch (error) {}
+      
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : (systemDark ? 'dark' : 'light');
+      
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="redesign-header fixed-top bg-white">
+    <div class="container-fluid px-4 px-lg-5">
+      <nav class="navbar navbar-expand-xxl py-3">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-xxl-0 fw-semibold">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="dropdown-item" href="index.html">Home &ndash; Painting Experts</a></li>
+                <li><a class="dropdown-item" href="home-02.html">Home &ndash; Design Studio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="color-consultation.html">Colors</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-actions d-flex align-items-center">
+            <button id="theme-toggle-home" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-5" aria-label="Toggle Theme">
+              <i class="bi bi-moon"></i>
+            </button>
+            <button id="rtl-toggle" type="button" class="btn btn-link navbar-icon-button text-navy p-0 fs-6 fw-semibold" aria-label="Switch to right-to-left layout" aria-pressed="false" title="Switch to right-to-left layout">
+              RTL
+            </button>
+            <a href="estimate.html" class="btn btn-navy navbar-estimate rounded-pill px-4 py-2 d-flex align-items-center gap-2 fw-semibold">
+              Get Free Estimate <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<style>
+/* Page Specific Pricing Styles */
+.pricing-hero {
+  --pricing-heading: var(--color-heading);
+  --pricing-text: var(--color-text);
+  --pricing-accent: var(--color-accent);
+  --pricing-caption: var(--color-surface);
+  --pricing-button-bg: var(--fixed-navy);
+  --pricing-button-text: var(--fixed-white);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--c-bg-alt);
+  padding: calc(var(--pricing-header-height, 96px) + 64px) 0 64px;
+  border-bottom: 1px solid var(--color-border);
+}
+html[data-theme="dark"] .pricing-hero {
+  --pricing-button-bg: var(--color-primary-button);
+  --pricing-button-text: var(--color-primary-button-text);
+}
+.pricing-hero::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  inset-inline-end: 20px;
+  top: calc(var(--pricing-header-height, 96px) + 24px);
+  background: var(--color-accent);
+  opacity: .12;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+.pricing-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+.pricing-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--pricing-accent);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.pricing-hero-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.pricing-hero h1 {
+  color: var(--pricing-heading);
+  font-size: var(--fluid-h1);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.pricing-hero h1 span { color: inherit; }
+.pricing-hero-description {
+  max-width: 490px;
+  color: var(--pricing-text);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.pricing-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.pricing-hero .pricing-hero-button {
+  --bs-btn-color: var(--pricing-button-text);
+  --bs-btn-bg: var(--pricing-button-bg);
+  --bs-btn-border-color: var(--pricing-button-bg);
+  --bs-btn-hover-color: #142e4a;
+  --bs-btn-hover-bg: #b89562;
+  --bs-btn-hover-border-color: #b89562;
+  --bs-btn-active-color: #142e4a;
+  --bs-btn-active-bg: #b89562;
+  --bs-btn-active-border-color: #b89562;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+.pricing-hero .pricing-hero-button-secondary {
+  --bs-btn-color: var(--pricing-heading);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: color-mix(in srgb, var(--color-heading) 50%, transparent);
+}
+.pricing-hero-button:focus-visible { outline: 2px solid var(--pricing-heading); outline-offset: 4px; }
+.pricing-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--pricing-text);
+  font-size: .8rem;
+  margin: 24px 0 0;
+}
+.pricing-hero-note i { color: var(--pricing-accent); }
+.pricing-hero-visual { margin: 0; min-width: 0; }
+.pricing-hero-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+  border-radius: 100px 16px 0 0;
+}
+.pricing-hero-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--pricing-caption);
+  color: var(--color-heading);
+  border-radius: 0 0 16px 16px;
+}
+.pricing-hero-caption small { display: block; font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 4px; }
+.pricing-hero-caption strong { font-size: .95rem; }
+.pricing-hero-swatches { display: flex; flex-shrink: 0; }
+.pricing-hero-swatches span { width: 28px; height: 28px; border: 2px solid var(--pricing-caption); border-radius: 50%; margin-inline-start: -6px; }
+#painting-packages { scroll-margin-top: calc(var(--header-height, 96px) + 24px); }
+@media (max-width: 991.98px) {
+  .pricing-hero { padding: calc(var(--pricing-header-height, 84px) + 40px) 0 40px; }
+  .pricing-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pricing-hero-description { max-width: 600px; }
+  .pricing-hero-visual img { aspect-ratio: 16 / 9; border-start-start-radius: 64px; }
+}
+@media (max-width: 575.98px) {
+  .pricing-hero > .container { padding-inline: 24px; }
+  .pricing-hero-eyebrow { font-size: .65rem; letter-spacing: .08em; }
+  .pricing-hero-actions { flex-direction: column; }
+  .pricing-hero-caption { padding: 16px; }
+  .pricing-hero-caption strong { font-size: .85rem; }
+}
+
+/* Timeline */
+.process-step { position: relative; }
+.process-step::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  opacity: 0.3;
+  z-index: 0;
+}
+.process-step:last-child::after { display: none; }
+.process-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--fixed-navy);
+  color: var(--fixed-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem auto;
+  position: relative;
+  z-index: 1;
+  border: 4px solid var(--color-surface);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+@media (max-width: 991px) {
+  .process-step::after {
+    top: 100%;
+    right: auto;
+    left: 30px;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  .process-step {
+    display: flex;
+    text-align: left !important;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .process-number { margin: 0; flex-shrink: 0; }
+}
+
+/* Comparison Table */
+.table-comparison th { background-color: var(--color-section-alt); color: var(--color-heading); font-weight: bold; border-color: var(--color-border); }
+.table-comparison td { color: var(--color-text); border-color: var(--color-border); vertical-align: middle; }
+.table-comparison tbody tr:hover td { background-color: var(--color-section-alt); }
+.featured-col { background-color: var(--color-accent-bg) !important; }
+</style>
+
+<!-- SECTION 1: PRICING HERO -->
+<section class="pricing-hero" aria-labelledby="pricing-hero-title">
+  <div class="container pricing-hero-grid">
+    <div>
+      <span class="pricing-hero-eyebrow">Fair pricing. Beautiful results.</span>
+      <h1 id="pricing-hero-title">Painting Packages<br><span>&amp; Pricing.</span></h1>
+      <p class="pricing-hero-description">A fresh start for your space, a clear plan for your budget. Explore our painting packages and find the right finish for your home's next chapter.</p>
+      <div class="pricing-hero-actions">
+        <a href="#painting-packages" class="btn pricing-hero-button">Explore Packages <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+        <a href="estimate.html" class="btn pricing-hero-button pricing-hero-button-secondary">Get Free Estimate <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <p class="pricing-hero-note"><i class="bi bi-check-circle" aria-hidden="true"></i>Clear inclusions. Quotes tailored to your home.</p>
+    </div>
+    <figure class="pricing-hero-visual">
+      <img src="assets/images/projects/living-room-overview.webp" width="1440" height="900" fetchpriority="high" alt="Warm neutral living room with freshly painted beige walls and crisp white crown molding">
+      <figcaption class="pricing-hero-caption">
+        <div><small>Your next chapter</small><strong>A fresh finish. A space to love.</strong></div>
+        <div class="pricing-hero-swatches" aria-hidden="true"><span style="background: #c4b59e;"></span><span style="background: #fdfaf4;"></span><span style="background: #19324d;"></span></div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- SECTION 2: HOW OUR PRICING WORKS -->
+<section class="section-padding bg-white">
+  <div class="container">
+    <div class="text-center mb-5 max-w-500 mx-auto" data-aos="fade-up">
+      <h2 class="fw-bold text-navy display-6 mb-3">Beautiful Results. Clear Expectations.</h2>
+      <p class="text-slate">Every home is different. Our painting estimates consider the size of your space, surface conditions, preparation requirements, paint selection, and project complexity.</p>
+    </div>
+    
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="p-4 bg-ivory rounded-4 h-100 border border-soft text-center hover-lift">
+          <div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-4 shadow-sm" style="width: 60px; height: 60px;">
+            <span class="text-gold fw-bold fs-4">01</span>
+          </div>
+          <h4 class="text-navy fw-bold fs-5 mb-3">Choose Your Service</h4>
+          <p class="text-slate small mb-0">Select interior painting, exterior painting, cabinet painting, or another residential service.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 bg-ivory rounded-4 h-100 border border-soft text-center hover-lift">
+          <div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-4 shadow-sm" style="width: 60px; height: 60px;">
+            <span class="text-gold fw-bold fs-4">02</span>
+          </div>
+          <h4 class="text-navy fw-bold fs-5 mb-3">Explore Package Inclusions</h4>
+          <p class="text-slate small mb-0">Understand the typical scope, preparation work, and finishing options included in each package.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 bg-ivory rounded-4 h-100 border border-soft text-center hover-lift">
+          <div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-4 shadow-sm" style="width: 60px; height: 60px;">
+            <span class="text-gold fw-bold fs-4">03</span>
+          </div>
+          <h4 class="text-navy fw-bold fs-5 mb-3">Request Your Estimate</h4>
+          <p class="text-slate small mb-0">Share your project details to receive a customized quote based on your requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: PAINTING PACKAGE CARDS -->
+<section class="section-padding bg-ivory" id="painting-packages">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- PACKAGE 1: Standard Room -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="bg-white rounded-4 p-4 p-xl-5 border border-soft shadow-sm hover-lift h-100 d-flex flex-column">
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-7 mb-2 d-block">Room Refresh</span>
+          <h3 class="fw-bold text-navy mb-3 fs-4">Standard Room Painting</h3>
+          <p class="text-slate small mb-4 pb-3 border-bottom border-soft">Ideal for refreshing a bedroom, living room, or individual interior space.</p>
+          
+          <div class="mb-4">
+            <div class="d-flex align-items-end gap-1 mb-1">
+              <span class="fs-6 text-slate fw-semibold">Starts at</span>
+              <span class="display-6 fw-bold text-navy lh-1">$450*</span>
+            </div>
+            <p class="text-slate fs-7 fst-italic mb-0">*Illustrative starting price — final quote varies</p>
+          </div>
+          
+          <div class="flex-grow-1">
+            <h6 class="text-navy fw-bold mb-3 fs-6">What's Included</h6>
+            <ul class="list-unstyled mb-4 text-slate small d-flex flex-column gap-2">
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Initial project discussion.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Basic furniture & floor protection.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Prep of suitable existing surfaces.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Minor nail-hole filling.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Spot priming where necessary.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Two finish coats on walls.</li>
+            </ul>
+            
+            <h6 class="text-navy fw-bold mb-3 fs-6">Not Typically Included</h6>
+            <ul class="list-unstyled mb-4 text-slate small d-flex flex-column gap-2 opacity-75">
+              <li class="d-flex gap-2"><i class="bi bi-dash-circle mt-1"></i> Ceiling, door, & trim painting.</li>
+              <li class="d-flex gap-2"><i class="bi bi-dash-circle mt-1"></i> Major drywall repairs.</li>
+            </ul>
+            
+            <div class="p-3 bg-ivory rounded-3 border border-soft mb-4">
+              <p class="text-slate small mb-0"><strong>Best For:</strong> A single standard-sized room with walls in reasonable condition.</p>
+            </div>
+          </div>
+          
+          <a href="estimate.html?service=Interior" class="btn border hero-outline-button text-navy fw-bold rounded-pill w-100 py-3 hover-bg-gold transition-fast">Get Room Estimate &rarr;</a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 2: Full Interior (FEATURED) -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-ivory rounded-4 p-4 p-xl-5 border shadow-lg h-100 d-flex flex-column position-relative" style="border-color: var(--color-accent) !important; border-width: 2px !important; z-index: 2;">
+          <div class="position-absolute top-0 start-50 translate-middle badge bg-gold text-white rounded-pill px-3 py-2 fw-bold tracking-wide shadow-sm">POPULAR CHOICE</div>
+          
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-7 mb-2 d-block">Whole Home</span>
+          <h3 class="fw-bold text-navy mb-3 fs-4">Complete Interior</h3>
+          <p class="text-slate small mb-4 pb-3 border-bottom border-soft">Ideal for refreshing multiple rooms or coordinating an entire home's color scheme.</p>
+          
+          <div class="mb-4">
+            <div class="d-flex align-items-end gap-1 mb-1">
+              <span class="display-6 fw-bold text-navy lh-1">Custom Estimate</span>
+            </div>
+            <p class="text-slate fs-7 fst-italic mb-0">Recommended for multi-room projects</p>
+          </div>
+          
+          <div class="flex-grow-1">
+            <h6 class="text-navy fw-bold mb-3 fs-6">What's Included</h6>
+            <ul class="list-unstyled mb-4 text-slate small d-flex flex-column gap-2">
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Multi-room painting plan.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Color coordination discussion.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Full furniture & floor protection.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Standard wall surface prep.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Priming where required.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Room-to-room finish consistency.</li>
+            </ul>
+            
+            <h6 class="text-navy fw-bold mb-3 fs-6">Optional Enhancements</h6>
+            <ul class="list-unstyled mb-4 text-slate small d-flex flex-column gap-2">
+              <li class="d-flex gap-2"><i class="bi bi-plus-circle text-navy mt-1"></i> Ceiling, doors, and trim.</li>
+              <li class="d-flex gap-2"><i class="bi bi-plus-circle text-navy mt-1"></i> Accent walls & detailed consults.</li>
+            </ul>
+            
+            <div class="p-3 bg-white rounded-3 border border-soft mb-4">
+              <p class="text-slate small mb-0"><strong>Best For:</strong> Homeowners refreshing several spaces with a coordinated finish.</p>
+            </div>
+          </div>
+          
+          <a href="estimate.html?service=Interior" class="btn bg-navy text-white fw-bold rounded-pill w-100 py-3 shadow-sm hover-bg-gold transition-fast">Request Interior Estimate &rarr;</a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 3: Cabinets -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-white rounded-4 p-4 p-xl-5 border border-soft shadow-sm hover-lift h-100 d-flex flex-column">
+          <span class="text-gold fw-bold text-uppercase tracking-wide fs-7 mb-2 d-block">Kitchen Update</span>
+          <h3 class="fw-bold text-navy mb-3 fs-4">Cabinet Refinishing</h3>
+          <p class="text-slate small mb-4 pb-3 border-bottom border-soft">Ideal for updating existing kitchen cabinetry without a complete replacement.</p>
+          
+          <div class="mb-4">
+            <div class="d-flex align-items-end gap-1 mb-1">
+              <span class="fs-6 text-slate fw-semibold">Starts at</span>
+              <span class="display-6 fw-bold text-navy lh-1">$2,500*</span>
+            </div>
+            <p class="text-slate fs-7 fst-italic mb-0">*Illustrative starting price — subject to size</p>
+          </div>
+          
+          <div class="flex-grow-1">
+            <h6 class="text-navy fw-bold mb-3 fs-6">What's Included</h6>
+            <ul class="list-unstyled mb-4 text-slate small d-flex flex-column gap-2">
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Cabinet condition assessment.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Hardware & door preparation.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Cleaning, degreasing & sanding.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Suitable primer application.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Cabinet-grade coating.</li>
+              <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-gold mt-1"></i> Reassembly where agreed.</li>
+            </ul>
+            
+            <h6 class="text-navy fw-bold mb-3 fs-6">Not Typically Included</h6>
+            <ul class="list-unstyled mb-4 text-slate small d-flex flex-column gap-2 opacity-75">
+              <li class="d-flex gap-2"><i class="bi bi-dash-circle mt-1"></i> Cabinet or hardware replacement.</li>
+              <li class="d-flex gap-2"><i class="bi bi-dash-circle mt-1"></i> Structural carpentry repairs.</li>
+            </ul>
+            
+            <div class="p-3 bg-ivory rounded-3 border border-soft mb-4">
+              <p class="text-slate small mb-0"><strong>Best For:</strong> Existing cabinets in good structural condition.</p>
+            </div>
+          </div>
+          
+          <a href="estimate.html?service=Cabinets" class="btn border hero-outline-button text-navy fw-bold rounded-pill w-100 py-3 hover-bg-gold transition-fast">Get Cabinet Estimate &rarr;</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: DETAILED PACKAGE COMPARISON -->
+<section class="section-padding bg-white border-top border-soft">
+  <div class="container">
+    <div class="text-center mb-5 max-w-500 mx-auto" data-aos="fade-up">
+      <h2 class="fw-bold text-navy display-6 mb-3">Compare Our Painting Packages</h2>
+      <p class="text-slate">See the main differences between our services to find the best starting point for your project.</p>
+    </div>
+    
+    <div class="table-responsive rounded-4 border border-soft shadow-sm" data-aos="fade-up">
+      <table class="table table-comparison mb-0 text-center align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="text-start p-4 w-25 border-end border-soft bg-ivory">Features</th>
+            <th scope="col" class="p-4 bg-white text-navy">Single Room</th>
+            <th scope="col" class="p-4 featured-col text-navy position-relative">
+              <div class="position-absolute top-0 start-0 w-100 h-1px bg-gold" style="height:2px;"></div>
+              Full Interior
+            </th>
+            <th scope="col" class="p-4 bg-white text-navy">Cabinets</th>
+          </tr>
+        </thead>
+        <tbody class="border-top-0">
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Primary Scope</td>
+            <td class="p-4 bg-white text-slate">One Room</td>
+            <td class="p-4 featured-col text-slate fw-semibold">Multiple Rooms</td>
+            <td class="p-4 bg-white text-slate">Kitchen Cabinets</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Consultation</td>
+            <td class="p-4 bg-white text-slate">Included</td>
+            <td class="p-4 featured-col text-slate fw-semibold">Included</td>
+            <td class="p-4 bg-white text-slate">Included</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Surface Preparation</td>
+            <td class="p-4 bg-white text-slate">Basic</td>
+            <td class="p-4 featured-col text-slate fw-semibold">Room-Specific</td>
+            <td class="p-4 bg-white text-slate">Cabinet-Specific</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Painting Application</td>
+            <td class="p-4 bg-white text-slate">Walls</td>
+            <td class="p-4 featured-col text-slate fw-semibold">Interior Areas</td>
+            <td class="p-4 bg-white text-slate">Cabinet Coatings</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Minor Wall Filling</td>
+            <td class="p-4 bg-white text-slate"><i class="bi bi-check2 text-gold fs-5"></i> Included</td>
+            <td class="p-4 featured-col text-slate"><i class="bi bi-check2 text-gold fs-5"></i> Included</td>
+            <td class="p-4 bg-white text-slate text-muted small">Not Applicable</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Color Planning</td>
+            <td class="p-4 bg-white text-slate">Optional</td>
+            <td class="p-4 featured-col text-slate fw-semibold text-navy">Available</td>
+            <td class="p-4 bg-white text-slate text-navy">Available</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Ceiling Painting</td>
+            <td class="p-4 bg-white text-slate">Optional</td>
+            <td class="p-4 featured-col text-slate">Optional</td>
+            <td class="p-4 bg-white text-slate text-muted small">Not Applicable</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory text-navy">Trim Painting</td>
+            <td class="p-4 bg-white text-slate">Optional</td>
+            <td class="p-4 featured-col text-slate">Optional</td>
+            <td class="p-4 bg-white text-slate text-muted small">Not Applicable</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold p-4 border-end border-soft bg-ivory border-bottom-0 text-navy">Custom Quote</td>
+            <td class="p-4 bg-white text-slate border-bottom-0">Available</td>
+            <td class="p-4 featured-col text-navy fw-bold border-bottom-0">Required</td>
+            <td class="p-4 bg-white text-slate border-bottom-0">Available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: INTERIOR & EXTERIOR PRICING GUIDE -->
+<section class="section-padding bg-ivory border-top border-soft">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Interior Panel -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="bg-white rounded-4 overflow-hidden border border-soft shadow-sm h-100 d-flex flex-column hover-lift">
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80" alt="Interior Painting" class="w-100" style="height: 250px; object-fit: cover;">
+          <div class="p-4 p-xl-5 flex-grow-1 d-flex flex-column">
+            <h3 class="fw-bold text-navy mb-3">Interior Painting Pricing</h3>
+            <p class="text-slate mb-4">Interior project pricing is highly dependent on property-specific factors. We ensure an accurate estimate by assessing the full scope.</p>
+            <ul class="list-unstyled mb-5 text-slate small d-flex flex-column gap-2 flex-grow-1">
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Number of rooms and dimensions.</li>
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Wall condition and required prep work.</li>
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Inclusion of ceilings, trim, and doors.</li>
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Premium finish selection and paint brands.</li>
+            </ul>
+            <a href="services.html#interior-painting" class="btn home-action gap-2 mt-auto align-self-start">
+              Explore Interior Painting <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Exterior Panel -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white rounded-4 overflow-hidden border border-soft shadow-sm h-100 d-flex flex-column hover-lift">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Exterior Painting" class="w-100" style="height: 250px; object-fit: cover;">
+          <div class="p-4 p-xl-5 flex-grow-1 d-flex flex-column">
+            <h3 class="fw-bold text-navy mb-3">Exterior Painting Pricing</h3>
+            <p class="text-slate mb-4">Because exterior painting involves variable environmental and architectural elements, all exterior projects require a custom estimate.</p>
+            <ul class="list-unstyled mb-5 text-slate small d-flex flex-column gap-2 flex-grow-1">
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Property size, height, and access points.</li>
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Siding materials and condition (wood, stucco).</li>
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Weather resilience prep and coating systems.</li>
+              <li class="d-flex gap-2"><i class="bi bi-record-circle text-gold mt-1"></i> Complex trim, detailing, or multi-color plans.</li>
+            </ul>
+            <a href="services.html#exterior-painting" class="btn home-action gap-2 mt-auto align-self-start">
+              Explore Exterior Painting <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: OPTIONAL SERVICES & ADD-ONS -->
+<section class="section-padding bg-white">
+  <div class="container">
+    <div class="text-center mb-5 max-w-500 mx-auto" data-aos="fade-up">
+      <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">Enhancements</span>
+      <h2 class="fw-bold text-navy display-6 mb-3">Customize Your Project</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="p-4 border border-soft rounded-4 h-100 hover-lift bg-ivory">
+          <i class="bi bi-layers fs-3 text-gold mb-3 d-block"></i>
+          <h5 class="text-navy fw-bold mb-2">Ceiling Painting</h5>
+          <p class="text-slate small mb-3">Refresh ceiling surfaces for a clean and consistent appearance.</p>
+          <a href="services.html#wall-ceiling-painting" class="text-navy fw-semibold text-decoration-none hover-gold fs-7">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 border border-soft rounded-4 h-100 hover-lift bg-ivory">
+          <i class="bi bi-door-open fs-3 text-gold mb-3 d-block"></i>
+          <h5 class="text-navy fw-bold mb-2">Trim & Door Painting</h5>
+          <p class="text-slate small mb-3">Refine baseboards, moldings, doors, and architectural details.</p>
+          <a href="services.html#trim-door-painting" class="text-navy fw-semibold text-decoration-none hover-gold fs-7">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 border border-soft rounded-4 h-100 hover-lift bg-ivory">
+          <i class="bi bi-palette fs-3 text-gold mb-3 d-block"></i>
+          <h5 class="text-navy fw-bold mb-2">Accent Walls</h5>
+          <p class="text-slate small mb-3">Add visual depth and personality with a thoughtfully chosen feature wall.</p>
+          <a href="services.html#interior-painting" class="text-navy fw-semibold text-decoration-none hover-gold fs-7">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="p-4 border border-soft rounded-4 h-100 hover-lift bg-ivory">
+          <i class="bi bi-tools fs-3 text-gold mb-3 d-block"></i>
+          <h5 class="text-navy fw-bold mb-2">Drywall Repairs</h5>
+          <p class="text-slate small mb-3">Prepare damaged surfaces through appropriate filling, patching, and smoothing.</p>
+          <a href="services.html#drywall-repair" class="text-navy fw-semibold text-decoration-none hover-gold fs-7">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 border border-soft rounded-4 h-100 hover-lift bg-ivory">
+          <i class="bi bi-chat-heart fs-3 text-gold mb-3 d-block"></i>
+          <h5 class="text-navy fw-bold mb-2">Color Consultation</h5>
+          <p class="text-slate small mb-3">Explore coordinated color combinations and finish recommendations.</p>
+          <a href="color-consultation.html" class="text-navy fw-semibold text-decoration-none hover-gold fs-7">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 border border-soft rounded-4 h-100 hover-lift bg-ivory">
+          <i class="bi bi-house-add fs-3 text-gold mb-3 d-block"></i>
+          <h5 class="text-navy fw-bold mb-2">Deck & Fence Painting</h5>
+          <p class="text-slate small mb-3">Refresh exterior timber surfaces with suitable coatings or stains.</p>
+          <a href="services.html#deck-fence-painting" class="text-navy fw-semibold text-decoration-none hover-gold fs-7">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: WHAT AFFECTS PAINTING COST? -->
+<section class="section-padding bg-ivory border-top border-soft">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/images/pricing/wall-preparation.webp" width="960" height="1200" loading="lazy" decoding="async" alt="Painter smoothing a wall patch before painting, with the floor protected by a drop cloth" class="img-fluid rounded-4 shadow-sm w-100" style="object-fit: cover; aspect-ratio: 4/5;">
+      </div>
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+        <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">Understanding Estimates</span>
+        <h2 class="fw-bold text-navy display-6 mb-5">What Goes Into Your Painting Estimate?</h2>
+        
+        <div class="row g-4">
+          <div class="col-md-6 d-flex gap-3">
+            <i class="bi bi-arrows-fullscreen text-gold fs-3"></i>
+            <div>
+              <h6 class="text-navy fw-bold mb-1">Size of the Area</h6>
+              <p class="text-slate small mb-0">Larger surfaces generally require more materials and labor.</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex gap-3">
+            <i class="bi bi-hammer text-gold fs-3"></i>
+            <div>
+              <h6 class="text-navy fw-bold mb-1">Surface Condition</h6>
+              <p class="text-slate small mb-0">Repairs and preparation can significantly affect the scope.</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex gap-3">
+            <i class="bi bi-paint-bucket text-gold fs-3"></i>
+            <div>
+              <h6 class="text-navy fw-bold mb-1">Paint & Finish Selection</h6>
+              <p class="text-slate small mb-0">Different coating systems have different material costs.</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex gap-3">
+            <i class="bi bi-layers text-gold fs-3"></i>
+            <div>
+              <h6 class="text-navy fw-bold mb-1">Number of Coats</h6>
+              <p class="text-slate small mb-0">Darker color changes or porous surfaces require more coverage.</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex gap-3">
+            <i class="bi bi-ladder text-gold fs-3"></i>
+            <div>
+              <h6 class="text-navy fw-bold mb-1">Accessibility</h6>
+              <p class="text-slate small mb-0">High walls and difficult elevations require specialized equipment.</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex gap-3">
+            <i class="bi bi-puzzle text-gold fs-3"></i>
+            <div>
+              <h6 class="text-navy fw-bold mb-1">Project Complexity</h6>
+              <p class="text-slate small mb-0">Detailed trim and occupied spaces add preparation time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: OUR ESTIMATE PROCESS -->
+<section class="section-padding bg-white">
+  <div class="container text-center">
+    <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">How It Works</span>
+    <h2 class="fw-bold text-navy display-6 mb-5 pb-4">From Your First Inquiry to a Clear Project Estimate</h2>
+    
+    <div class="row position-relative">
+      <div class="col-lg-3 process-step" data-aos="fade-up">
+        <div class="process-number">01</div>
+        <div class="process-content">
+          <h5 class="text-navy fw-bold fs-5 mb-2">Tell Us About Your Project</h5>
+          <p class="text-slate small px-md-3">Share your painting requirements, property details, and preferred timeline.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 process-step" data-aos="fade-up" data-aos-delay="100">
+        <div class="process-number">02</div>
+        <div class="process-content">
+          <h5 class="text-navy fw-bold fs-5 mb-2">Review Your Space</h5>
+          <p class="text-slate small px-md-3">Discuss dimensions, conditions, surfaces, and any inspection requirements.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 process-step" data-aos="fade-up" data-aos-delay="200">
+        <div class="process-number">03</div>
+        <div class="process-content">
+          <h5 class="text-navy fw-bold fs-5 mb-2">Receive Your Scope</h5>
+          <p class="text-slate small px-md-3">Understand the proposed preparation, painting work, material assumptions, and cost.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 process-step" data-aos="fade-up" data-aos-delay="300">
+        <div class="process-number">04</div>
+        <div class="process-content">
+          <h5 class="text-navy fw-bold fs-5 mb-2">Plan Your Transformation</h5>
+          <p class="text-slate small px-md-3">Review the details and coordinate the next steps if you decide to proceed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: PRICING FAQ -->
+<section class="section-padding bg-ivory">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="fw-bold text-slate text-uppercase tracking-wide mb-2 d-block fs-7">Common Questions</span>
+      <h2 class="fw-bold text-navy display-6">Pricing FAQ</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="accordion" id="pricingFaqAccordion">
+          
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq1" aria-expanded="true">
+                How much does it cost to paint one room?
+              </button>
+            </h2>
+            <div id="pfaq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                A standard room refresh typically starts around $450, but the final price depends on the exact room dimensions, ceiling height, condition of the walls, and whether trim or ceiling painting is included in the scope.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq2">
+                Why does whole-house painting require a custom estimate?
+              </button>
+            </h2>
+            <div id="pfaq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Every home is unique in its architectural details, square footage, and current wall conditions. A custom estimate ensures that we accurately evaluate your space and provide a transparent, comprehensive price without hidden surprises.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq3">
+                Are paint and materials included in the package price?
+              </button>
+            </h2>
+            <div id="pfaq3" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Yes, our written estimates generally include standard premium paint and all necessary preparation materials. If you choose specialty or ultra-premium coatings, the material cost adjustment will be explicitly detailed in your quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq4">
+                Does the estimate include wall preparation?
+              </button>
+            </h2>
+            <div id="pfaq4" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Standard surface preparation (minor filling, sanding, and cleaning) is included. However, extensive drywall repairs or wallpaper removal fall outside standard prep and will be quoted as an additional necessary service.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq5">
+                Can I add ceiling and trim painting?
+              </button>
+            </h2>
+            <div id="pfaq5" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Absolutely. Ceilings, baseboards, doors, and window casings are popular add-ons that we can easily itemize in your custom quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq6">
+                How much does exterior house painting cost?
+              </button>
+            </h2>
+            <div id="pfaq6" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Exterior pricing varies widely based on the home's size, number of stories, exterior material (stucco, wood siding, brick), and required prep work. All exterior projects require an on-site evaluation to provide an accurate estimate.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq7">
+                Does cabinet painting cost less than cabinet replacement?
+              </button>
+            </h2>
+            <div id="pfaq7" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Yes, professional cabinet refinishing and painting is typically significantly more cost-effective than a full cabinet replacement, often saving homeowners thousands of dollars while achieving a brand-new look.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq8">
+                Will the price change if repairs are needed?
+              </button>
+            </h2>
+            <div id="pfaq8" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                If our team discovers unforeseen damage (like wood rot or severe water damage) during preparation, we will stop and discuss the required repairs and any associated cost adjustments before proceeding.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-soft mb-3 rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq9">
+                Can I request an estimate before choosing colors?
+              </button>
+            </h2>
+            <div id="pfaq9" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Yes. We can provide an accurate estimate based on the scope of work and standard premium coatings. You can finalize your specific color selections during a subsequent color consultation before the project begins.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item border-soft rounded overflow-hidden shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold text-navy bg-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq10">
+                How long is a painting estimate valid?
+              </button>
+            </h2>
+            <div id="pfaq10" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+              <div class="accordion-body text-slate bg-white">
+                Our written painting estimates are typically valid for 30 days. Material costs can fluctuate, so projects booked beyond this window may be subject to a minor requote.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script for Auto-select service in estimate form based on URL parameter -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // This assumes estimate.html checks the URL params. We are passing standard query params in the hrefs.
+});
+</script>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-5">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 pe-lg-5">
+          <a class="navbar-brand d-flex align-items-center mb-4" href="index.html" style="padding: 0;">
+          <img src="assets/images/brand/chromora-logo.svg" alt="Chromora - Painting Experts" height="40" width="auto" class="d-inline-block align-text-top logo-light">
+          <img src="assets/images/brand/chromora-logo-dark-bg.svg" alt="Chromora" height="40" width="auto" class="d-inline-block align-text-top logo-dark d-none">
+        </a>
+          <p class="text-slate small mb-4">Premium residential painting services. Discover modern finishes, thoughtful color selection, and meticulous craftsmanship for your home.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li><a href="index.html" class="text-slate text-decoration-none small hover-gold transition-fast">Home</a></li>
+            <li><a href="projects.html" class="text-slate text-decoration-none small hover-gold transition-fast">Projects</a></li>
+            <li><a href="about.html" class="text-slate text-decoration-none small hover-gold transition-fast">About Us</a></li>
+            <li><a href="services.html" class="text-slate text-decoration-none small hover-gold transition-fast">Services</a></li>
+            <li><a href="contact.html" class="text-slate text-decoration-none small hover-gold transition-fast">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Get in Touch</h5>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-telephone text-gold mt-1"></i>
+              <a href="tel:5551234567" class="text-slate text-decoration-none small hover-gold transition-fast">(555) 123-4567</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-envelope text-gold mt-1"></i>
+              <a href="mailto:hello@chromora.demo" class="text-slate text-decoration-none small hover-gold transition-fast">hello@chromora.demo</a>
+            </li>
+            <li class="d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt text-gold mt-1"></i>
+              <span class="text-slate small">123 Design Avenue,<br>Creative City, ST 12345</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fw-bold text-navy fs-6 mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 no-stack footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Facebook (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-facebook fs-6"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" aria-label="Log in to Instagram (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-instagram fs-6"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="Log in to LinkedIn (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-linkedin fs-6"></i></a>
+            <a href="https://www.youtube.com/signin" target="_blank" rel="noopener noreferrer" aria-label="Log in to YouTube (opens in a new tab)" class="bg-navy text-white rounded-circle d-flex align-items-center justify-content-center transition-fast hover-bg-gold" style="width: 36px; height: 36px;"><i class="bi bi-youtube fs-6"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row border-top pt-4 mt-4 align-items-center">
+        <div class="col-12 text-center text-md-start">
+          <p class="text-slate small mb-0">&copy; 2026 Chromora Painting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

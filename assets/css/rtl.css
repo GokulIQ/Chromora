@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Chromora - Comprehensive Right-to-Left (RTL) Layout Stylesheet
+   Full RTL bidirectional support for Arabic, Hebrew and RTL locales
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   1. TYPOGRAPHY & TEXT UTILITIES
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. BOOTSTRAP SPACING & MARGIN FLIPS
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .me-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+[dir="rtl"] .me-5 { margin-right: 0 !important; margin-left: 3rem !important; }
+
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+[dir="rtl"] .ms-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
+[dir="rtl"] .ms-5 { margin-left: 0 !important; margin-right: 3rem !important; }
+
+[dir="rtl"] .pe-1 { padding-right: 0 !important; padding-left: 0.25rem !important; }
+[dir="rtl"] .pe-2 { padding-right: 0 !important; padding-left: 0.5rem !important; }
+[dir="rtl"] .pe-3 { padding-right: 0 !important; padding-left: 1rem !important; }
+[dir="rtl"] .pe-4 { padding-right: 0 !important; padding-left: 1.5rem !important; }
+[dir="rtl"] .pe-5 { padding-right: 0 !important; padding-left: 3rem !important; }
+
+[dir="rtl"] .ps-1 { padding-left: 0 !important; padding-right: 0.25rem !important; }
+[dir="rtl"] .ps-2 { padding-left: 0 !important; padding-right: 0.5rem !important; }
+[dir="rtl"] .ps-3 { padding-left: 0 !important; padding-right: 1rem !important; }
+[dir="rtl"] .ps-4 { padding-left: 0 !important; padding-right: 1.5rem !important; }
+[dir="rtl"] .ps-5 { padding-left: 0 !important; padding-right: 3rem !important; }
+
+/* --------------------------------------------------------------------------
+   3. HEADER & NAVIGATION (RTL)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .dropdown-toggle::after {
+  margin-right: 0.255em;
+  margin-left: 0;
+}
+
+[dir="rtl"] .navbar-brand {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. ICON ORIENTATION (FLIP ARROWS & CHEVRONS, PRESERVE BRAND & PHOTOS)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .bi-arrow-right,
+[dir="rtl"] .bi-arrow-left,
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-chevron-left {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* DO NOT mirror photography, logos, badges, or brand graphics */
+[dir="rtl"] img,
+[dir="rtl"] svg.logo,
+[dir="rtl"] .navbar-brand img {
+  transform: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. MODALS & DIALOGS (RTL)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .service-details-close,
+[dir="rtl"] .btn-close {
+  left: 1.5rem !important;
+  right: auto !important;
+}
+
+@media (max-width: 767.98px) {
+  [dir="rtl"] .service-details-close,
+  [dir="rtl"] .btn-close {
+    left: 1rem !important;
+    right: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. FORMS & INPUT GROUPS (RTL)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: var(--radius-sm, 8px);
+  border-bottom-left-radius: var(--radius-sm, 8px);
+}
+
+[dir="rtl"] .input-group > :not(:last-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--radius-sm, 8px);
+  border-bottom-right-radius: var(--radius-sm, 8px);
+}
+
+[dir="rtl"] .rounded-start-pill {
+  border-radius: 0 50rem 50rem 0 !important;
+}
+
+[dir="rtl"] .rounded-end-pill {
+  border-radius: 50rem 0 0 50rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. CAROUSELS & SWIPER (RTL)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .swiper-button-prev,
+[dir="rtl"] .swiper-button-next {
+  transform: scaleX(-1);
+}
+
+/* --------------------------------------------------------------------------
+   8. ACCORDION & LISTS (RTL)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .accordion-button::after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+[dir="rtl"] ul.list-unstyled,
+[dir="rtl"] ol.list-unstyled {
+  padding-right: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. TABLES & BREADCRUMBS (RTL)
+   -------------------------------------------------------------------------- */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-right: 0;
+  padding-left: var(--bs-breadcrumb-item-padding-x, 0.5rem);
+}
+
+[dir="rtl"] .table-comparison th.text-start,
+[dir="rtl"] .table-comparison td.text-start {
+  text-align: right !important;
+}
