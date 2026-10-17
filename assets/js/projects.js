@@ -116,10 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 waitForTransition: false
             } : false,
             speed: 280, // 280ms smooth crossfade
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,

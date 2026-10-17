@@ -851,7 +851,21 @@ html[data-theme="dark"] .hero-compact { background-color: var(--c-bg-alt); }
 /* Photo panels use fixed contrast pairs in both light and dark themes. */
 .painting-panel { display: flex; min-width: 0; }
 .painting-panel-content { flex: 1; min-width: 0; }
-.painting-panel-copy { width: 100%; text-align: start; }
+.painting-panel-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100%;
+  text-align: start;
+}
+.painting-panel .painting-panel-link { margin-top: auto; }
+.project-detail-hero #detailTitle {
+  max-width: 17ch;
+  font-size: clamp(2rem, 4.2vw, 3.75rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
 .painting-panel-features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
@@ -1328,4 +1342,30 @@ footer {
   .feature-col {
     margin-bottom: 20px;
   }
+}
+
+/* Keep story proof points aligned as the text column narrows. */
+.story-proof-list li {
+  display: grid;
+  grid-template-columns: 22px minmax(150px, 180px) minmax(0, 1fr);
+  align-items: start;
+  column-gap: 12px;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.story-proof-list li:last-child { margin-bottom: 0; }
+.story-proof-list li i {
+  margin-top: 0.2em;
+  font-size: 1rem;
+}
+.story-proof-list li strong { color: var(--color-heading); }
+
+@media (max-width: 767.98px) {
+  .story-proof-list li {
+    grid-template-columns: 22px minmax(0, 1fr);
+    row-gap: 2px;
+  }
+  .story-proof-list li strong,
+  .story-proof-list li span { grid-column: 2; }
+  .story-proof-list li i { grid-row: 1 / span 2; }
 }

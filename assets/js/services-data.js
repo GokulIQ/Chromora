@@ -1662,8 +1662,8 @@ const servicesData = [
     "title": "Accent Wall Painting",
     "category": "Specialty Finishes",
     "filterClass": "specialty",
-    "image": "assets/images/services/specialty-finishes/accent-wall-painting.webp",
-    "primaryImage": "assets/images/services/specialty-finishes/accent-wall-painting.webp",
+    "image": "assets/images/Accent%20Wall%20Painting.jpg",
+    "primaryImage": "assets/images/Accent%20Wall%20Painting.jpg",
     "description": "Add visual depth, drama, and focal interest to any room with high-impact color selection and crisp, razor-sharp edge lines.",
     "overview": [
       "An accent wall is one of the most effective ways to introduce bold design personality, define room zones, and anchor key architectural elements without overwhelming your space.",
@@ -1716,8 +1716,8 @@ const servicesData = [
     ],
     "gallery": [
       {
-        "src": "assets/images/services/specialty-finishes/accent-wall-painting.webp",
-        "alt": "Elegant deep blue residential accent feature wall"
+        "src": "assets/images/Accent%20Wall%20Painting.jpg",
+        "alt": "Sage green painted bedroom accent wall with a layered mountain mural"
       },
       {
         "src": "assets/images/home-02/color-story-blue.webp",
