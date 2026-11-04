@@ -221,7 +221,7 @@ iframe {
 /* --------------------------------------------------------------------------
    7. MOBILE NAVIGATION DRAWER & TABLET ADAPTATION
    -------------------------------------------------------------------------- */
-@media (max-width: 1399.98px) {
+@media (max-width: 1023.98px) {
   .navbar-toggler {
     min-width: var(--min-tap-target);
     min-height: var(--min-tap-target);

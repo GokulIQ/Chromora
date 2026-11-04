@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobilePreferences = document.createElement('div');
     mobilePreferences.className = 'navbar-mobile-preferences';
     menuToggle.before(mobilePreferences);
-    const mobileHeader = window.matchMedia('(max-width: 1399.98px)');
+    const mobileHeader = window.matchMedia('(max-width: 1023.98px)');
     const placePreferences = () => {
       if (mobileHeader.matches) {
         mobilePreferences.append(...preferenceButtons);

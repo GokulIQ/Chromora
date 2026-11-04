@@ -34,9 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainNav = document.getElementById('mainNav');
   const navbarToggler = document.querySelector('.navbar-toggler');
   if (mainNav && navbarToggler) {
+    // Clear an open mobile drawer when the full navigation becomes visible.
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', (event) => {
+      if (event.matches) {
+        mainNav.classList.remove('show');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
     // Lock body scroll when mobile navigation is open
     mainNav.addEventListener('show.bs.collapse', () => {
-      if (window.innerWidth < 1400) {
+      if (window.innerWidth < 1024) {
         document.body.style.overflow = 'hidden';
       }
     });
@@ -79,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-close on nav link click (for in-page anchors on mobile)
     mainNav.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth < 1400 && mainNav.classList.contains('show')) {
+        if (window.innerWidth < 1024 && mainNav.classList.contains('show')) {
           if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
             const bsCollapse = bootstrap.Collapse.getInstance(mainNav) || new bootstrap.Collapse(mainNav, { toggle: false });
             bsCollapse.hide();
