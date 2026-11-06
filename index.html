@@ -148,6 +148,15 @@ html[data-theme="dark"] .hero-overlay {
   position: relative;
   z-index: 2;
 }
+.hero-description {
+  max-width: min(100%, 760px);
+  color: #19324d;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.8);
+}
+html[data-theme="dark"] .hero-description {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(20, 46, 74, 0.95), 0 0 8px rgba(20, 46, 74, 0.85);
+}
 
 /* Floating Estimate Bar */
 .floating-estimate-wrapper {
@@ -277,7 +286,7 @@ html[data-theme="dark"] .hero-overlay {
         <span class="fw-bold text-gold text-uppercase tracking-wide fs-8 mb-3 d-block letter-spacing-2">PREMIUM RESIDENTIAL PAINTING EXPERTS</span>
         <h1 class="display-3 fw-bolder text-navy mb-2 lh-sm text-balance">Bring New Life to Your Home</h1>
         <h2 class="display-5 fw-normal text-gold mb-4" style="font-family: var(--font-script, 'Georgia', serif); font-style: italic;">with Beautiful Colors</h2>
-        <p class="lead text-slate mb-5 max-w-500 fs-6 lh-lg">From refreshing your favorite room to transforming your entire exterior, Chromora brings thoughtful color, expert preparation, and beautifully finished results to every residential painting project.</p>
+        <p class="lead text-slate mb-5 max-w-500 fs-6 lh-lg hero-description">From refreshing your favorite room to transforming your entire exterior, Chromora brings thoughtful color, expert preparation, and beautifully finished results to every residential painting project.</p>
         <div class="hero-actions">
           <a href="estimate.html" class="btn hero-button-primary">
             Get Free Estimate <i class="bi bi-arrow-right"></i>
